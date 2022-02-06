@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/vishwasracharya/vishwasacharya.com/issues"
   },
-  "homepage": "https://github.com/vishwasracharya/vishwasacharya.com#readme"
+  "homepage": "https://github.com/vishwasracharya/vishwasacharya.com#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
 }
