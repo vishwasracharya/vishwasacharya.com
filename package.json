@@ -1,0 +1,19 @@
+{
+  "name": "vishwasacharya.com",
+  "version": "1.0.0",
+  "description": "Vishwas Acharya Website in NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishwasracharya/vishwasacharya.com.git"
+  },
+  "author": "Vishwas Acharya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishwasracharya/vishwasacharya.com/issues"
+  },
+  "homepage": "https://github.com/vishwasracharya/vishwasacharya.com#readme"
+}
