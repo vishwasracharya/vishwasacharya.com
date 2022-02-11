@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Vishwas Acharya</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <%- include ('includes/styles.ejs')  %> 
 </head>
 <body>
+    <%- include ('includes/navbar.ejs')  %>
+    
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center vertical-center center font-monospace">Hi, I am Vishwas Acharya 👋</h1>
+                    <h1 class="text-center vertical-center center">Hi, I am Vishwas Acharya 👋</h1>
                 </div>
             </div>
         </div>
     </section>
-    <script src="js/bootstrap.min.js"></script>
+    
+    <%- include ('includes/footer.ejs')  %>
+    <%- include ('includes/scripts.ejs')  %> 
 </body>
 </html>
