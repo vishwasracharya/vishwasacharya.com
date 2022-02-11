@@ -2,6 +2,16 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+.dark-mode{
+    background-color: #000000f5;
+    color: #ffffff;
+}
+.shadow-white{
+    box-shadow: 0 1rem 3rem rgba(243, 243, 243, 0.175)!important;
+}
+.invert{
+    filter: invert(100%);
+}
 .vertical-center{
     min-height: 100%;
     min-height: 100vh; 
