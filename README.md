@@ -6,12 +6,12 @@ My Website in nodejs
 ```
 git clone https://github.com/vishwasracharya/vishwasacharya.com.git
 ```
-- After Installation, open the terminal of vs-code or any and type
+- After Installation, open the `terminal` of vs-code or any and type
+> It will install all the required files.
 ```
 npm install
 ```
-> It will install all the required files.
-- To run the project type
+- To `run` the project type
 ```
 npm run dev
 ```
