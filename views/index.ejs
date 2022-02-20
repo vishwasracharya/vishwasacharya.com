@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Vishwas Acharya</title>
-    <%- include ('includes/styles.ejs')  %> 
+    <%- include ('includes/styles.ejs') %>
 </head>
+
 <body>
-    <%- include ('includes/navbar.ejs')  %>
-    
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center vertical-center center">Hi, I am Vishwas Acharya 👋</h1>
+    <%- include ('includes/navbar.ejs') %>
+
+        <section>
+            <div class="container">
+                <div class="row vertical-center center mx-auto">
+                    <div class="col-10 col-md-7">
+                        <div class="d-flex flex-column align-items-start justify-content-start">
+                            <h1>Vishwas Acharya</h1>
+                            <p>A tech 💻 guy by profession, other than that it's just a side hustle 😉</p>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-3">
+                        <img class="rounded-pill w-100" src="img/main-image-original.jpg" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <%- include ('includes/footer.ejs')  %>
-    <%- include ('includes/scripts.ejs')  %> 
+        </section>
+
+        <%- include ('includes/footer.ejs') %>
+            <%- include ('includes/scripts.ejs') %>
 </body>
+
 </html>
