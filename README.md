@@ -15,3 +15,10 @@ npm install
 ```
 npm run dev
 ```
+
+## External Libraries Used
+- `BOOTSTRAP` for website structure and basic design, Using `NPM`.
+- `FONT AWESOME` for icons, Using `CDN` link.
+
+## Framework Used
+- `EXPRESS` for easier coding.
