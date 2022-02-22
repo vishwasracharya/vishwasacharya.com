@@ -24,4 +24,10 @@
         <changefreq>weekly</changefreq>
         <lastmod>2022-02-22</lastmod>
     </url>
+    <url>
+        <loc>https://vishwasacharya.herokuapp.com/podcast</loc>
+        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+        <lastmod>2022-02-22</lastmod>
+    </url>
 </urlset>
