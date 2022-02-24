@@ -35,3 +35,14 @@
             </div>
         </nav>
 </header>
+
+<script>
+    site_url = window.location.href;
+    if(site_url.includes("/about")){
+        document.getElementsByClassName("nav-link")[1].classList.add("active");
+    }else if(site_url.includes("/podcast")){
+        document.getElementsByClassName("nav-link")[2].classList.add("active");
+    }else {
+        document.getElementsByClassName("nav-link")[0].classList.add("active");
+    }
+</script>
