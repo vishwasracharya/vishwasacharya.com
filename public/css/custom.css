@@ -23,11 +23,24 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #cececef3;
 }
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Dark Mode CSS */
 .dark-mode {
-  background-color: #202124;
-  color: #ffffff;
+  background-color: #202124 !important;
+  color: #ffffff !important;
 }
 .shadow-white {
   box-shadow: 0 1rem 3rem rgba(243, 243, 243, 0.175) !important;
@@ -49,7 +62,8 @@
 /* A CSS gradient border for Hero/Landing Img. */
 .gradient-borders {
   border: double 7px transparent;
-  background-image: linear-gradient(#9400D3, #0000FF), radial-gradient(circle at top left, #4B0082,#f00 ,#3020ff);
+  background-image: linear-gradient(#9400d3, #0000ff),
+    radial-gradient(circle at top left, #4b0082, #f00, #3020ff);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
