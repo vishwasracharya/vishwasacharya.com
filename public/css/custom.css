@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "animation.css";
 /* :root{
   --royalBlue: #4169e1;
 } */
@@ -23,20 +24,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #cececef3;
 }
-body {
-  animation: blurInAnimation ease 0.8s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
 
-@keyframes blurInAnimation {
-  0% {
-    filter: blur(3px);
-  }
-  100% {
-    filter: blur(0px);
-  }
-}
 /* Dark Mode CSS */
 .dark-mode {
   background-color: #202124 !important;

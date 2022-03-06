@@ -1,0 +1,14 @@
+.blurInAnimation {
+  -webkit-animation: blurInAnimation ease 0.8s;
+  animation: blurInAnimation ease 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes blurInAnimation {
+  0% {
+    filter: blur(1px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
