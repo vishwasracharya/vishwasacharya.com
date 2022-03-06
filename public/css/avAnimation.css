@@ -1,0 +1,28 @@
+.blurIn {
+  -webkit-animation: blurIn ease 0.8s;
+  animation: blurIn ease 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes blurIn {
+  0% {
+    filter: blur(1px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+.fadeIn {
+  -webkit-animation: fadeIn ease 0.8s;
+  animation: fadeIn ease 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

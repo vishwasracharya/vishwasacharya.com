@@ -1,27 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="about-favicon.ico" type="image/x-icon">
     <title>About | Vishwas Acharya</title>
-    <%- include ('includes/styles.ejs')  %> 
+    <%- include ('includes/styles.ejs') %>
+        <style>
+            .age-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                color: rgb(255, 255, 255);
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: .1rem;
+            }
+
+            .img-with-text {
+                position: relative;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgba(0, 0, 0, 0.385);
+            }
+
+            .img-with-text:hover .overlay {
+                opacity: 1;
+            }
+        </style>
 </head>
-<body class="blurInAnimation">
-    <%- include ('includes/navbar.ejs')  %>
-    
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center vertical-center center">About Vishwas Acharya 👋</h1>
+
+<body class="blurIn">
+    <%- include ('includes/navbar.ejs') %>
+
+        <section>
+            <div class="container">
+                <div class="row vertical-center mx-md-5 mx-lg-0">
+                    <div class="col-md-3 mt-4 mt-md-0">
+                        <figure>
+                            <div class="img-with-text">
+                                <img src="img/about/av-about-main.jpg"
+                                    class="img-fluid shadow-lg fadeIn about-img-hover" alt="About Main Image" />
+                                <div class="overlay">
+                                    <p class="age-text fadeIn" id="age"></p>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-9 px-5 mt-5 mt-md-0 text-justify d-flex align-items-start justify-content-center flex-column">
+                        <h1 class="mb-3">Who Am I?</h1>
+                        <p>I'm a learner 🎓 & a hustler 😎, presently pursuing my Bachelors in Information
+                            Technology Engineering from Sardar Patel College of Engineering, which is
+                            located near Vallabh Vidhyanagar where I live, I moved to this city when I was in 10th class
+                            before that I used to live in Khambhat. Also working remotely as a Jr Frontend Developer
+                            intern at <a class="text-decoration-none" href="https://futureblink.com/">@futureblink</a>,
+                        </p>
+                        <p>I was a kinda introverted guy so to overcome my shyness and as a side hustle I make <a
+                                class="text-decoration-none" href="https://youtube.com/c/VishwasAcharya">Youtube</a>
+                            videos, <a class="text-decoration-none"
+                                href="https://open.spotify.com/show/7DQt4atsshjsEG0Am49lHr?si=ii3DcV4JQT2CxOJWWidZKg&utm_source=copy-link">Podcasts</a>
+                            🎙 and I have a liking towards Photography also, so sharing that through my <a
+                                class="text-decoration-none" href="https://instagram.com/vishwasracharya">Instagram</a>.
+                        </p>
+                        <p>And when I feel low 🥱 or in a zone to do nothing then I listen to songs 🎶 and dance on
+                            them, just to get myself back on track.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <%- include ('includes/footer.ejs')  %>
-    <%- include ('includes/scripts.ejs')  %> 
+        </section>
+
+        <!-- <section>
+            <div class="container">
+                <h2>What I Like?</h2>
+                <p>Reading Books</p>
+            </div>
+        </section> -->
+
+        <%- include ('includes/footer.ejs') %>
+            <%- include ('includes/scripts.ejs') %>
+
+                <script>
+                    document.getElementById('age').innerHTML = `Age ${calculateAge("2000-09-19")}`;
+                </script>
 </body>
+
 </html>
