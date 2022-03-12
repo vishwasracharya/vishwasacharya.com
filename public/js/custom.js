@@ -21,13 +21,10 @@ if (darkMode === 'enabled') {
     enableDarkMode();
 }
 darkModeToggle.addEventListener('click', () => {
-    console.log('clicked');
     darkMode = localStorage.getItem('darkMode');
     if (darkMode === 'enabled') {
-        console.log('disableDarkMode');
         disableDarkMode();
     } else {
-        console.log('enableDarkMode');
         enableDarkMode();
     }
 });
