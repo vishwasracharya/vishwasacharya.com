@@ -7,6 +7,9 @@ const enableDarkMode = () => {
     document.getElementById('homeNavbar').classList.remove('navbar-light');
     document.getElementById('homeNavbar').classList.add('navbar-dark');
     document.getElementById('homeNavbar').classList.add('bg-dark');
+    document.getElementsByClassName('badge')[0].classList.remove('bg-light');
+    document.getElementsByClassName('badge')[0].classList.add('bg-dark');
+    document.getElementsByClassName('badge')[0].classList.add('text-white');
     localStorage.setItem('darkMode', 'enabled');
 }
 const disableDarkMode = () => {
@@ -15,6 +18,9 @@ const disableDarkMode = () => {
     document.getElementById('homeNavbar').classList.add('navbar-light');
     document.getElementById('homeNavbar').classList.remove('navbar-dark');
     document.getElementById('homeNavbar').classList.remove('bg-dark');
+    document.getElementsByClassName('badge')[0].classList.remove('bg-dark');
+    document.getElementsByClassName('badge')[0].classList.add('bg-light');
+    document.getElementsByClassName('badge')[0].classList.remove('text-white');
     localStorage.setItem('darkMode', null);
 }
 if (darkMode === 'enabled') {

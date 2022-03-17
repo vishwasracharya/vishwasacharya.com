@@ -32,7 +32,8 @@
 .shadow-white {
   box-shadow: 0 1rem 3rem rgba(243, 243, 243, 0.175) !important;
 }
-.invert {
+.invert:hover {
+  transition: all 0.4s ease-in-out;
   filter: invert(100%);
 }
 .vertical-center {
@@ -59,4 +60,11 @@
 }
 .height-30{
   height: 30px;
+}
+/* link {
+  color: #ffffff;
+} */
+link:hover {
+  transition: all 0.4s ease-in-out !important;
+  color: #4169e1 !important;
 }
