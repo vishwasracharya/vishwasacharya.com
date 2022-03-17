@@ -1,0 +1,1 @@
+exports.site_url = process.env.SITE_URL || 'http://localhost:5000'
