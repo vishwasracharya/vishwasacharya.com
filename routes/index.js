@@ -1,32 +1,82 @@
-// 🏠 Home Router (index.js)
+// Home Router (index.js)
 let express = require('express');
 let router = express.Router();
 const path = require('path');
 const keys = require('../config/keys');
+const Subscriber = require('../model/subscriberSchema');
+// require db 
+require('../db/conn');
 
 function getPathFromUrl(url) {
     return url.split("?")[0];
 }
 
-// 🏠 Home Page Route (Landing Page)
+// Home Page Route (Landing Page)
 router.get('/', addLocals, function (req, res) {
     res.render('index', {
         slug: getPathFromUrl(req.originalUrl),
     });
 });
 
-// 🤔 About Page Route (Landing Page)
+// About Page Route (Landing Page)
 router.get('/about', addLocals, function (req, res) {
     res.render('about', {
         slug: getPathFromUrl(req.originalUrl),
     });
 });
 
-// 🎙 Podcast Page Route (Landing Page)
+// Podcast Page Route (Landing Page)
 router.get('/podcast', addLocals, function (req, res) {
     res.render('podcast', {
         slug: getPathFromUrl(req.originalUrl),
     });
+});
+
+// Newsletter Route (About Page)
+router.post('/subscribe', function (req, res) {
+    const { name, email } = req.body;
+    // validate
+    if (!name || !email) {
+        return res.status(400).json({
+            status: 'error',
+            message: 'Please fill all the fields'
+        });
+    }
+    // save to db
+    Subscriber.findOne({ email: email })
+        .then(subscriber => {
+            if (subscriber) {
+                return res.status(400).json({
+                    isSubscribed: true,
+                    status: 'error',
+                    message: 'Email already exists'
+                });
+            }
+            const newSubscriber = new Subscriber({
+                name,
+                email
+            });
+            newSubscriber.save()
+                .then(subscriber => {
+                    res.status(201).json({
+                        success: true,
+                        status: 'success',
+                        message: 'Subscribed successfully'
+                    });
+                })
+                .catch(err => {
+                    res.status(500).json({
+                        success: false,
+                        status: 'error',
+                        message: 'Something went wrong'
+                    });
+                });
+        }).catch(err => {
+            res.status(500).json({
+                status: 'error',
+                message: 'Something went wrong'
+            });
+        });
 });
 
 function addLocals(req, res, next) {
