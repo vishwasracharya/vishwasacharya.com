@@ -3,9 +3,9 @@
 
 <head>
     <%- include ('includes/meta.ejs') %>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Vishwas Acharya</title>
-    <%- include ('includes/styles.ejs') %>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Vishwas Acharya</title>
+        <%- include ('includes/styles.ejs') %>
 </head>
 
 <body>
@@ -21,14 +21,85 @@
                         </div>
                     </div>
                     <div class="col-10 col-md-3">
-                        <img class="rounded-pill w-100 shadow-lg gradient-borders" id="heroImg" src="img/index-hero-img-2.png" alt="Vishwas Acharya Hero Image">
+                        <img loading="lazy" class="rounded-pill w-100 shadow-lg gradient-borders" id="heroImg"
+                            src="img/index-hero-img-2.png" alt="Vishwas Acharya Hero Image">
                     </div>
                 </div>
             </div>
         </section>
 
-        <%- include ('includes/footer.ejs') %>
-            <%- include ('includes/scripts.ejs') %>
+        <!-- for Blogs -->
+        <section class="mb-5">
+            <div class="container">
+                <h2 class="text-start mb-3">Blogs 📑</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="h4">Why Do I write Blogs?</p>
+                        <p>The reason I write blogs because there are some bits of my experiences that I cannot share
+                            via Podcast or Youtube, because I won't be able to give justice to that parts. Hence I share
+                            that by writing Blogs</p>
+                        <p>I started writing Blogs in 2021 just after I started making podcasts. And I must say, I
+                            learned so many things during the time to making this things, And so I'll be sharing
+                            everything what I've learned via this platforms</p>
+                        <div class="d-flex align-items-start justify-content-start">
+                            <a class="btn btn-blue text-center height-30" href="/blog">See More<i
+                                    class="fa-solid fa-arrow-up-right-from-square ms-2 text-white"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mx-auto mb-3">
+                        <a href="" class="text-decoration-none">
+                            <div class="rounded border-0">
+                                <img loading="lazy" class="card-img-top rounded"
+                                    src="https://vishwasracharya.github.io/img/blogs/The-attraction.png"
+                                    alt="The Attraction">
+                                <div class="text-center mt-2">
+                                    <h5 class="m-0 p-0">The Attraction!</h5>
+                                    <p class=""><small class="text-muted">November 08, 2021</small></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="container">
+                <h2 class="mb-3">Podcast 🎙</h2>
+                <div class="row">
+                    <div class="col-md-6 overflow-hidden mb-3">
+                        <iframe loading="lazy" class="fadeIn" allow="autoplay *; encrypted-media *; fullscreen *"
+                            frameborder="0" height="450"
+                            style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                            src="https://embed.podcasts.apple.com/us/podcast/vishwas-acharya/id1527114275"></iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="h4">Why Do I Make Podcast?</p>
+                        <p>As we all know that during 2020 the coivd pandemic came up, so we all were in our houses,
+                            hence at that time so many new terms came up and one of them was podcast, so I thought why
+                            not giv it a try, so I researched about it like what is it and how it work, then I wrote
+                            some scripts based on the book i have Which I call it a Quote Book, then I released my first
+                            podcast on Aug 9, 2020 and then I started making more and as I got into flow I really liked
+                            this way of sharing things, hence that's the origin story of my podcast</p>
+                        <div class="d-flex align-items-start justify-content-start">
+                            <a class="btn btn-blue text-center height-30" href="/podcast">See More<i
+                                    class="fa-solid fa-arrow-up-right-from-square ms-2 text-white"></i></a>
+                        </div>
+                        <!-- <div class="d-flex align-items-center justify-content-center flex-column">
+                            <iframe loading="lazy" class="fadeIn w-100 h-100 my-2" src="https://open.spotify.com/embed/show/7DQt4atsshjsEG0Am49lHr?utm_source=generator" scrolling=no frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <iframe loading="lazy" class="fadeIn w-100 h-100 my-2" sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups allow-forms" scrolling=no frameborder="0" src="https://embed.radiopublic.com/e?if=vishwas-acharya-GZJNmJ&ge=s1!d144c82fded09693ae8112bd1efd3d084b52b3e0"></iframe>
+                            <iframe loading="lazy" class="fadeIn w-100 h-100 my-2" src="https://anchor.fm/vishwasracharya/embed/episodes/The-Way-You-Talk--MATTERS-e11ci8h/a-a5l7m4e" frameborder="0" scrolling="no"></iframe>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include ('includes/cta.ejs') %>
+
+            <%- include ('includes/footer.ejs') %>
+                <%- include ('includes/scripts.ejs') %>
 </body>
 
 </html>

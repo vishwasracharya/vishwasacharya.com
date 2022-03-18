@@ -32,6 +32,18 @@ router.get('/podcast', addLocals, function (req, res) {
     });
 });
 
+router.get('/terms-of-services', addLocals, function (req, res) {
+    res.render('includes/terms-of-services', {
+        slug: getPathFromUrl(req.originalUrl),
+    });
+});
+
+router.get('/privacy-policy', addLocals, function (req, res) {
+    res.render('includes/privacy-policy', {
+        slug: getPathFromUrl(req.originalUrl),
+    });
+});
+
 // Newsletter Route (About Page)
 router.post('/subscribe', function (req, res) {
     const { name, email } = req.body;

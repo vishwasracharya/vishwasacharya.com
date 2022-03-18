@@ -9,6 +9,7 @@ const Subscriber = require('./model/subscriberSchema');
 
 // Routers for the different pages
 let indexRouter = require('./routes/index');
+let blogRouter = require('./routes/blog');
 
 let app = express();
 app.use(express.json());
@@ -21,5 +22,6 @@ app
   .listen(PORT, () => console.log(`App Started on ${ PORT }`))
 
 app.use('/', indexRouter)
+app.use('/blog', blogRouter)
 
 module.exports = app;
