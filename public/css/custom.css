@@ -8,6 +8,7 @@
   font-family: 'Montserrat', sans-serif;
   /* font-size: small; */
   color: #202124;
+  text-decoration: none !important;
 }
 /*  Scroll Bar CSS */
 ::-webkit-scrollbar {
@@ -27,7 +28,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #cececef3;
 }
-
+a{
+  text-decoration: none;
+  color: #202124;
+}
+a:hover{
+  text-decoration: none;
+  color: #202124;
+}
 /* Dark Mode CSS */
 .dark-mode {
   background-color: #202124 !important;
@@ -79,4 +87,15 @@ link:hover {
 .btn-blue:hover{
   background-color: #2b59e2 !important;
   color: #ffffff !important;
+}
+.tab{
+  color: #000000;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.tab:hover{
+  background-color: #e8e8e879;
+}
+.tab-active{
+  background-color: #e8e8e879 !important;
 }
