@@ -1,16 +1,20 @@
 const site_url = window.location.href;
-function navbarActive() {
+function btnActive() {
     if (site_url.includes("/about")) {
         document.getElementsByClassName("tab")[1].classList.add("tab-active");
     } else if (site_url.includes("/blog")) {
         document.getElementsByClassName("tab")[2].classList.add("tab-active");
     } else if (site_url.includes("/podcast")) {
         document.getElementsByClassName("tab")[3].classList.add("tab-active");
+    } else if (site_url.includes("/terms-of-services")) {
+        document.getElementsByClassName("tab")[4].classList.add("tab-active");
+    } else if (site_url.includes("/privacy-policy")) {
+        document.getElementsByClassName("tab")[5].classList.add("tab-active");
     } else {
         document.getElementsByClassName("tab")[0].classList.add("tab-active");
     }
 }
-navbarActive();
+btnActive();
 // 💡 Dark & Light Mode Toggle Using Local Storage
 // let darkMode = localStorage.getItem('darkMode');
 // const darkModeToggle = document.querySelector('#darkModeToggle');
