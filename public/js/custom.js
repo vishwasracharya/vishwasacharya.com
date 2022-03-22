@@ -1,14 +1,14 @@
-const site_url = window.location.href;
+const siteFullURL = window.location.href;
 function btnActive() {
-    if (site_url.includes("/about")) {
+    if (siteFullURL.includes("/about")) {
         document.getElementsByClassName("tab")[1].classList.add("tab-active");
-    } else if (site_url.includes("/blog")) {
+    } else if (siteFullURL.includes("/blog")) {
         document.getElementsByClassName("tab")[2].classList.add("tab-active");
-    } else if (site_url.includes("/podcast")) {
+    } else if (siteFullURL.includes("/podcast")) {
         document.getElementsByClassName("tab")[3].classList.add("tab-active");
-    } else if (site_url.includes("/terms-of-services")) {
+    } else if (siteFullURL.includes("/terms-of-services")) {
         document.getElementsByClassName("tab")[4].classList.add("tab-active");
-    } else if (site_url.includes("/privacy-policy")) {
+    } else if (siteFullURL.includes("/privacy-policy")) {
         document.getElementsByClassName("tab")[5].classList.add("tab-active");
     } else {
         document.getElementsByClassName("tab")[0].classList.add("tab-active");
