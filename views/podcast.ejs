@@ -6,8 +6,11 @@
     <title>Podcast | Vishwas Acharya</title>
     <%- include ('includes/styles.ejs')  %> 
     <style>
-        .pod-hero-img{
-            width: 20vw;
+        .text-underline-hover:hover{
+            text-decoration: underline;
+            color: #4169e1;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
     </style>
 </head>
@@ -19,10 +22,10 @@
             <div class="col-md-10 mx-auto">
                 <div class=" border-0 shadow rounded my-3">
                     <div class="row">   
-                        <div class="col-md-4">
-                            <img loading="lazy" class="pod-hero-img m-3" src="https://cdn-icons-png.flaticon.com/512/3845/3845814.png" alt="">
+                        <div class="col-12 col-md-4 center px-3">
+                            <img loading="lazy" class="pod-hero-img img-fluid rounded" src="img/podcast/pod-cover.png" alt="Vishwas Acharya Podcast Cover">
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-12 col-md-8 text-center text-md-start">
                             <div class="my-3">
                                 <h1>Vishwas Acharya</h1>
                                 <p>This Podcast is about Vishwas sharing his life experience and thoughts 💭 also he will try to summon up his most of the podcasts with a quote. Vishwas is an aspiring Youtuber and content creator so he also shares his social media journey with you. He wants to contribute to the world in whatever way he is capable of so he makes these podcasts and YouTube videos so that his voice reaches to maximum people.
@@ -41,8 +44,50 @@
             <div class="col-md-10 mx-auto">
                 <div>
                     <h2>List of Episodes</h2>
+                    <!-- <div class="d-flex align-items-start justify-content-start flex-column"> -->
+                    <ol>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/3yHTUwOWBFtNF1Qq4PutUU?si=53B1XlnFSFSl1-U_ZOkr2Q" target="_blank" rel="noopener noreferrer"> Introduction </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/3yHTUwOWBFtNF1Qq4PutUU?si=53B1XlnFSFSl1-U_ZOkr2Q" target="_blank" rel="noopener noreferrer"> My First Day of College </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/6GetNiG9Auam2uEhqk93SC?si=Y_3HX7X6SfO_1khBn4iTaA" target="_blank" rel="noopener noreferrer"> Comparing vs Finding </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/6UAp5n9ubScIu1bolieE3J?si=SlsK3VV0QZOZGMT_Bt8T9w" target="_blank" rel="noopener noreferrer"> Whose Thinking Matters </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/0wLwqEon5LtSQuXWNZQQ6p?si=t5TyWINgRFqsKeJVytrSRA" target="_blank" rel="noopener noreferrer"> Hiding doesn't work </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/6qJKWoVtL4IGotXLFLMkjP?si=WsmKOgxASZ-oBTlP-87U8Q" target="_blank" rel="noopener noreferrer"> Is Fighting the only option </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/15hNBM4QvzNlfog7zgv0Rg?si=3A7vGyGmQRuzKn3wvwlqoQ" target="_blank" rel="noopener noreferrer"> Are you honest to yourself </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/4wF02ySFSQalPCZ9h0sdmu?si=8xNigEBYRG-ADHWb8PsXSA" target="_blank" rel="noopener noreferrer"> Multitasking will distract you </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/0hCayaryDU0yXs7lEJ152P?si=4uF9Yb2NTHaHXRcuUunEzQ" target="_blank" rel="noopener noreferrer"> Focus on one thing at a time</a> </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/6beCWemwaRaiaZ99T1T2gq?si=tOr1FByJQLKLFUVIkFZgsA" target="_blank" rel="noopener noreferrer"> The Attraction </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/3zbkjwVRC7CgJjcOItALJ8?si=er0FQQbdS-q_AfstWyDTyg" target="_blank" rel="noopener noreferrer"> Write your Goals to achieve </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/2i10mBVDRKaCk2iH4J9NCQ?si=q-nmwnvyT3aK42zisXhRoQ" target="_blank" rel="noopener noreferrer"> Start training from today itself </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/4UAeceCBT0FlUqMfYSYXLe?si=JcwSSAD2See481--tHENfA" target="_blank" rel="noopener noreferrer"> Partiality</a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/5YqcQhm24KG1Lp6rB1ylwB?si=kD8mpUEPQa-b6HKHhfvxkw" target="_blank" rel="noopener noreferrer"> Never assume what other people think </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/6Bvp5oeNcxVUrb60y0PRPi?si=_0ZWAR5tS8-SVWTUixXpWw" target="_blank" rel="noopener noreferrer"> Don't Show Off</a> </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/22sXPeSt7K2YVG2iW4NjYY?si=yyEhCW_pQGuciADqZuf3Fw" target="_blank" rel="noopener noreferrer"> Focus on What you have </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/4DjNGG70eWq487zb3lyexY?si=Ffz6Be8QQqO_41LtOF0Q0Q" target="_blank" rel="noopener noreferrer"> Do What you Fear From</a> </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/58hEwXn067coP96WWLivb8?si=IeQSeRBPTq6mjT-EdK1ZCQ" target="_blank" rel="noopener noreferrer"> EMPTY mind is a DEVIL'S House</a> </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/4mbFvIrRh7MsZp7IcfxCWj?si=XHHkqGJWSAC7Eu9T3jMhsA" target="_blank" rel="noopener noreferrer"> Exchange your thoughts </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/2crhDgvkwWnxevh3H1IOuH?si=vNAxnp5rRmOVPyeOe4nHPg" target="_blank" rel="noopener noreferrer"> EGO </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/1K4mzweHRNQTtw6oKhIbt6?si=_SZGATQWRtSmgixWUAK42w" target="_blank" rel="noopener noreferrer"> The WANT & NEED</a> </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/6mpUf1kOEipMA0imfOPuzn?si=5eq3wi89RZSknhkokKYsbA" target="_blank" rel="noopener noreferrer"> Every Coin has two sides</a> </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/77Ssm7VGbNfJgVnqxmN9GW?si=-ap-OHL5RBmhSVJgM7vC4w" target="_blank" rel="noopener noreferrer"> The Two most important persons in your LIFE </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/3SV9Xxrhl4B7ZEkqN84uYn?si=_OtSfN0_TM6Ir3ob4--8MA" target="_blank" rel="noopener noreferrer"> Asking for sympathy will make you weaker </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/637eqEDLvK3aNBwBXTi7fB?si=RSSiUDoTTkmRNXa9JIJ3ew" target="_blank" rel="noopener noreferrer"> Be Responsive Not Reactive</a> </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/4OncdDD7W3IYVQgmf0lK59?si=oDZuUgKJRf-wOUs38UXdHg" target="_blank" rel="noopener noreferrer"> LIE Once and TRUST is gone </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/6dDpX9DQhhUHO5asUOcjP7?si=5MA7gRXhSfeJj4WzQhlf0g" target="_blank" rel="noopener noreferrer"> Dont FIGHT over being PERFECT </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/6Tg5wvU46LPvu007IlWwjA?si=qD2BVpl7RmeLDOHozIa6hg" target="_blank" rel="noopener noreferrer"> Have you ever felt Left Out</a> </li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/0Mz00eBthmQRE8G6AbtDCD?si=uCbb23-qQteVqhmXOr3wGg" target="_blank" rel="noopener noreferrer"> Be a LEARNER </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/2OBZj2RKDmMLiZDq5jbdfW?si=oxS60r8VR6u2zi8G6lzRDQ" target="_blank" rel="noopener noreferrer"> The Way you talk, MATTERS! </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/5CasgZN7YHq9Vyhay0QOaY?si=3ZM48XADT-ycFhtaf2MC0Q" target="_blank" rel="noopener noreferrer"> HATE </a></li>
+                        <li><a class="text-underline-hover" href="https://open.spotify.com/episode/4UBAOX9r4lPwfwPWt8ytGF?si=Ac33uVReTBOORoPVBuNM-w" target="_blank" rel="noopener noreferrer"> My Badminton Story</a> </li>
+                    </ol>
+                    <!-- </div> -->
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <span class="text-muted center">Page is still Under Development</span>
         </div>
     </section>
     
