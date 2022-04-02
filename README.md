@@ -1,6 +1,8 @@
 # vishwasacharya.com
 My Website in nodejs
 
+![Heroku](http://heroku-badge.herokuapp.com/?app=heroku-badge&root=projects.html)
+
 ## How to use it?
 - `clone` this repo in your local system.
 ```
@@ -21,4 +23,6 @@ npm run dev
 - `FONT AWESOME` for icons, Using `CDN` link.
 
 ## Framework Used
+- `EJS` for View Engine
 - `EXPRESS` for easier coding.
+- `MONGOOSE` fro Database
