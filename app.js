@@ -10,6 +10,7 @@ const Subscriber = require('./model/subscriberSchema');
 // Routers for the different pages
 let indexRouter = require('./routes/index');
 let blogRouter = require('./routes/blog');
+let podcastRouter = require('./routes/podcast');
 
 let app = express();
 app.use(express.json());
@@ -23,5 +24,6 @@ app
 
 app.use('/', indexRouter)
 app.use('/blog', blogRouter)
+app.use('/podcast', podcastRouter)
 
 module.exports = app;

@@ -25,13 +25,6 @@ router.get('/about', addLocals, function (req, res) {
     });
 });
 
-// Podcast Page Route (Landing Page)
-router.get('/podcast', addLocals, function (req, res) {
-    res.render('podcast', {
-        slug: getPathFromUrl(req.originalUrl),
-    });
-});
-
 router.get('/terms-of-services', addLocals, function (req, res) {
     res.render('includes/terms-of-services', {
         slug: getPathFromUrl(req.originalUrl),

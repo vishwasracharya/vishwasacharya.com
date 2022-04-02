@@ -1,0 +1,65 @@
+[
+  {
+    "pod_details": {
+      "pod_name": "Vishwas Acharya",
+      "pod_image": "img/podcast/pod-cover.png",
+      "pod_desc": "This Podcast is about Vishwas sharing his life experience and thoughts 💭 also he will try to summon up his most of the podcasts with a quote. Vishwas is an aspiring Youtuber and content creator so he also shares his social media journey with you. He wants to contribute to the world in whatever way he is capable of so he makes these podcasts and YouTube videos so that his voice reaches to maximum people. If you want to know more about Vishwas then follow him on his social media platforms."
+    },
+    "pod_availaibility": [
+      {
+        "platform_name": "Spotify",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/spotify@2x.png",
+        "platform_link": "https://open.spotify.com/show/7DQt4atsshjsEG0Am49lHr"
+      },
+      {
+        "platform_name": "Anchor",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/anchor-wave@2x.png",
+        "platform_link": "https://anchor.fm/vishwasracharya"
+      },
+      {
+        "platform_name": "Apple Podcasts",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/apple_podcasts.png",
+        "platform_link": "https://podcasts.apple.com/us/podcast/vishwas-acharya/id1527114275"
+      },
+      {
+        "platform_name": "Google Podcasts",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/google_podcasts_outline.png",
+        "platform_link": "https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yN2MzYjA2NC9wb2RjYXN0L3Jzcw=="
+      },
+      {
+        "platform_name": "Overcast",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/overcast.png",
+        "platform_link": "https://overcast.fm/itunes1527114275/vishwas-acharya"
+      },
+      {
+        "platform_name": "Amazon Music",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/amazon_music.png",
+        "platform_link": "https://music.amazon.com/podcasts/5b0984de-e05a-4894-a35c-71ff0d08452c/vishwas-acharya"
+      },
+      {
+        "platform_name": "Pocket Casts",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/pocket_casts.png",
+        "platform_link": "https://pca.st/z4xzukk2"
+      },
+      {
+        "platform_name": "RadioPublic",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/radiopublic.png",
+        "platform_link": "https://radiopublic.com/vishwas-acharya-GZJNmJ"
+      },
+      {
+        "platform_name": "Stitcher",
+        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/stitcher_dark.png",
+        "platform_link": "https://www.stitcher.com/podcast/vishwas-acharya"
+      }
+    ],
+    "pod_episodes":[
+        {
+            "episode_no": "1",
+            "episode_name": "Introduction",
+            "episode_image": "img/pod-blog/Be-a-learner.png",
+            "episode_desc": "Vishwas gives his introduction and gives the reason for making the podcast and why should you listen to his podcast. Also, he shares his social media links/ID into the podcast so make sure to listen up until the end. ",
+            "episode_emLink": "https://open.spotify.com/embed/episode/3yHTUwOWBFtNF1Qq4PutUU"
+        }
+    ]
+  }
+]

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('includes/meta.ejs') %>
+    <%- include ('../includes/meta.ejs') %>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Podcast | Vishwas Acharya</title>
-    <%- include ('includes/styles.ejs')  %> 
+    <%- include ('../includes/styles.ejs')  %> 
     <style>
         .text-underline-hover:hover{
             text-decoration: underline;
@@ -12,25 +12,33 @@
             cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
+        .platform-logo{
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .platform-logo:hover{
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body>
-    <%- include ('includes/navbar.ejs')  %>
+    <%- include ('../includes/navbar.ejs')  %>
     
-    <section class="my-5 py-5">
+    <section class="my-5 py-4">
         <div class="container">
             <div class="col-md-10 mx-auto">
                 <div class=" border-0 shadow rounded my-3">
                     <div class="row">   
                         <div class="col-12 col-md-4 center px-3">
-                            <img loading="lazy" class="pod-hero-img img-fluid rounded" src="img/podcast/pod-cover.png" alt="Vishwas Acharya Podcast Cover">
+                            <img loading="lazy" class="pod-hero-img img-fluid rounded" src="<%= podDetails.pod_image %>" alt="Vishwas Acharya Podcast Cover">
                         </div>
                         <div class="col-12 col-md-8 text-center text-md-start">
                             <div class="my-3">
-                                <h1>Vishwas Acharya</h1>
-                                <p>This Podcast is about Vishwas sharing his life experience and thoughts 💭 also he will try to summon up his most of the podcasts with a quote. Vishwas is an aspiring Youtuber and content creator so he also shares his social media journey with you. He wants to contribute to the world in whatever way he is capable of so he makes these podcasts and YouTube videos so that his voice reaches to maximum people.
-                                    If you want to know more about Vishwas then follow him on his social media platforms.</p>
-                                <a href="#" class="badge rounded-pill bg-light text-dark text-decoration-none">Available on 7 Platforms <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                                <h1><%= podDetails.pod_name %></h1>
+                                <p><%= podDetails.pod_desc %></p>
+                                <a href="#" class="badge rounded-pill bg-light text-dark text-decoration-none">Available on 7 Platforms</a>
                             </div>
                         </div>
                     </div>
@@ -39,12 +47,40 @@
         </div>
     </section>
 
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="mb-3">Podcast Availaibility</h2>
+                    <% for (let i=0; i<podAvailaibility.length; i++) {%>
+                        <a href="<%= podAvailaibility[i].platform_link %>" target="_blank" rel="noopener noreferrer">
+                            <img class="m-1 platform-logo" src="<%= podAvailaibility[i].platform_logo %>" alt="">
+                        </a>
+                    <% } %> 
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section>
+        <div class="container">
+            <div class="col-md-12 mx-auto">
+                <div>
+                    <h2>List of Episodes</h2>
+                    <ul>
+                        <% for (let i=0; i<podEpisodes.length; i++) {%>
+                            <li><a class="text-underline-hover" href="<%=site_url%><%=slug%>/<%= podEpisodes[i].episode_name.toLowerCase() %>" target="_blank" rel="noopener noreferrer"><%= podEpisodes[i].episode_name %></a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
         <div class="container">
             <div class="col-md-10 mx-auto">
                 <div>
                     <h2>List of Episodes</h2>
-                    <!-- <div class="d-flex align-items-start justify-content-start flex-column"> -->
                     <ol>
                         <li><a class="text-underline-hover" href="https://open.spotify.com/episode/3yHTUwOWBFtNF1Qq4PutUU?si=53B1XlnFSFSl1-U_ZOkr2Q" target="_blank" rel="noopener noreferrer"> Introduction </a></li>
                         <li><a class="text-underline-hover" href="https://open.spotify.com/episode/3yHTUwOWBFtNF1Qq4PutUU?si=53B1XlnFSFSl1-U_ZOkr2Q" target="_blank" rel="noopener noreferrer"> My First Day of College </a></li>
@@ -79,19 +115,20 @@
                         <li><a class="text-underline-hover" href="https://open.spotify.com/episode/5CasgZN7YHq9Vyhay0QOaY?si=3ZM48XADT-ycFhtaf2MC0Q" target="_blank" rel="noopener noreferrer"> HATE </a></li>
                         <li><a class="text-underline-hover" href="https://open.spotify.com/episode/4UBAOX9r4lPwfwPWt8ytGF?si=Ac33uVReTBOORoPVBuNM-w" target="_blank" rel="noopener noreferrer"> My Badminton Story</a> </li>
                     </ol>
-                    <!-- </div> -->
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section>
         <div class="container">
             <span class="text-muted center">Page is still Under Development</span>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/3yHTUwOWBFtNF1Qq4PutUU?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
     </section>
+
     
-    <%- include ('includes/footer.ejs')  %>
-    <%- include ('includes/scripts.ejs')  %> 
+    <%- include ('../includes/footer.ejs')  %>
+    <%- include ('../includes/scripts.ejs')  %> 
 </body>
 </html>
