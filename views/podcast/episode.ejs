@@ -3,7 +3,7 @@
 
 <head>
     <%- include ('../includes/meta.ejs') %>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <title>
             <%=selected_episode.split('-').join(' ')%> | Vishwas Acharya
         </title>
@@ -15,15 +15,13 @@
                         cursor: pointer;
                         transition: all 0.3s ease-in-out;
                     }
-
-                    .platform-logo {
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 10px;
+                    .scale-1 {
+                        width: 35px;
+                        height: 35px;
+                        /* border-radius: 10px; */
                         transition: all 0.3s ease-in-out;
                     }
-
-                    .platform-logo:hover {
+                    .scale-1:hover {
                         transform: scale(1.2);
                     }
                 </style>
@@ -35,17 +33,57 @@
         <section class="my-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 mx-auto">
+                    <div class="col-md-10 mx-auto">
                         <% for (let i=0; i<podEpisodes.length; i++) {%>
                             <% if (podEpisodes[i].episode_name.toLowerCase()==selected_episode.toLowerCase().split('-').join(' ')) {%>
-                                <div class="center">
-                                    <img loading="lazy" class="img-fluid rounded shadow" src="<%=podEpisodes[i].episode_image%>" alt="Vishwas Acharya Podcast Cover">
-                                </div>
-                                <div class="my-5">
-                                    <div class="row">
-                                        <h1 class="mb-3"><%= podEpisodes[i].episode_name %></h1>
-                                        <p class="mb-3"><%= podEpisodes[i].episode_desc %></p>
-                                        <iframe class="mb-3" src="https://open.spotify.com/embed/episode/<%= podEpisodes[i].episode_emLink %>?utm_source=generator" width="100%" height="232" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                                <div class="">
+                                    <div class="my-5 text-center">
+                                        <h1 class="fw-bold"><%= podEpisodes[i].episode_name %></h1>
+                                        <p class=""><i class="fa-solid fa-user mx-2"></i><strong>Author:</strong> Vishwas Acharya</p>
+                                        
+                                    </div>
+                                    <div class="px-1">
+                                        <div class="row mb-5">
+                                            <div class="col-12 col-md-6">
+                                                <img loading="lazy" class="img-fluid rounded shadow mb-3" width="700" src="<%=podEpisodes[i].episode_image%>" alt="Vishwas Acharya Podcast Cover">
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <p class="mb-3 text-justify"><%= podEpisodes[i].episode_desc %></p>
+                                                <div class="">
+                                                    <a href="https://www.facebook.com/sharer/sharer.php?u=<%=site_url%>/podcast/<%=slug%>&quote=Check out this amazing podcast - <%= podEpisodes[i].episode_name %>"
+                                                        title="Share by Facebook" rel="noreferer, noopener" target="_blank"
+                                                        class="rounded mx-1">
+                                                        <img class="fs-4 scale-1" src="https://img.icons8.com/color/344/facebook-new.png" alt="Facebook Icon"/>
+                    
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/shareArticle?url=<%=site_url%>/podcast/<%=slug%>&amp;title=<%= podEpisodes[i].episode_name %> &amp;summary=Check out this amazing podcast -&amp;source=<%=site_url%>/podcast/<%=slug%>"
+                                                        title="Share by LinkedIn" rel="noreferer, noopener" target="_blank"
+                                                        class="rounded mx-1">
+                                                        <img class="fs-4 scale-1" src="https://img.icons8.com/color/344/linkedin.png" alt="LinkedIn Icon"/>
+                                                    </a>
+                                                    <a href="https://twitter.com/intent/tweet?text=Check out this amazing podcast - <%= podEpisodes[i].episode_name %> at <%=site_url%>/podcast/<%=slug%>"
+                                                        title="Share by Tweet" rel="noreferer, noopener" target="_blank"
+                                                        class="rounded mx-1">
+                                                        <img class="fs-4 scale-1" src="https://img.icons8.com/color/344/twitter--v1.png" alt="Twitter Icon"/>
+                                                    </a>
+                                                    <a href="https://wa.me/?text=Check out this podcast - <%= podEpisodes[i].episode_name %> at <%=site_url%>/podcast/<%=slug%>"
+                                                        data-action="share/whatsapp/share" title="Share by Whatsapp"
+                                                        rel="noreferer, noopener" target="_blank" class="rounded mx-1">
+                                                        <img class="fs-4 scale-1" src="https://img.icons8.com/color/344/whatsapp--v1.png" alt="Whatsapp Icon"/>
+                    
+                                                    </a>
+                                                    <a href="mailto:?subject=<%= podEpisodes[i].episode_name %>&amp;body=Check out this podcast - <%= podEpisodes[i].episode_name %> at <%=site_url%>/podcast/<%=slug%>"
+                                                        title="Share by Email" title="Share by Email" rel="noreferer, noopener"
+                                                        target="_blank" class="rounded mx-1">
+                                                            <img class="fs-4 scale-1" src="https://img.icons8.com/color/344/gmail-new.png" alt="Gmail Icon"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h2 class="fw-bold mb-3">Listen Full Episode: </h2>
+                                            <iframe class="mb-3" src="https://open.spotify.com/embed/episode/<%= podEpisodes[i].episode_emLink %>?utm_source=generator" width="100%" height="232" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                                        </div>
                                     </div>
                                 </div>
                             <% } %>
@@ -54,6 +92,8 @@
                 </div>
             </div>
         </section>
+
+        <%- include ('../includes/cta.ejs') %>
 
         <%- include ('../includes/footer.ejs') %>
         <%- include ('../includes/scripts.ejs') %>

@@ -102,3 +102,6 @@ link:hover {
 .rounded{
   border-radius: 10px !important;
 }
+.text-blue{
+  color: #4169e1 !important;
+}
