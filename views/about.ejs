@@ -48,42 +48,40 @@
 <body>
     <%- include ('includes/navbar.ejs') %>
 
-        <section>
-            <div class="container">
-                <div class="row vertical-center mx-md-5 mx-lg-0">
-                    <div class="col-md-3 mt-4 mt-md-0">
-                        <figure>
-                            <div class="img-with-text">
-                                <img loading="lazy" src="img/about/av-about-main.jpg"
-                                    class="img-fluid shadow-lg fadeIn about-img-hover rounded" alt="About Main Image" />
-                                <div class="overlay">
-                                    <p class="age-text fadeIn" id="age"></p>
-                                </div>
-                            </div>
-                        </figure>
+    <div class="container">
+        <div class="row vertical-center mx-md-5 mx-lg-0">
+            <div class="col-md-3 mt-4 mt-md-0">
+                <figure>
+                    <div class="img-with-text">
+                        <img src="img/about/av-about-main.jpg"
+                            class="img-fluid shadow-lg fadeIn about-img-hover rounded" alt="About Main Image" />
+                        <div class="overlay">
+                            <p class="age-text fadeIn" id="age"></p>
+                        </div>
                     </div>
-                    <div class="col-md-9 px-md-5 mt-5 mt-md-0 mb-3 mb-md-0 text-justify d-flex align-items-start justify-content-center flex-column">
-                        <h1 class="mb-3">Who Am I?</h1>
-                        <p>I'm a learner 🎓 & a hustler 😎, presently pursuing my Bachelors in Information
-                            Technology Engineering from Sardar Patel College of Engineering, which is
-                            located near Vallabh Vidhyanagar where I live, I moved to this city when I was in 10th class
-                            before that I used to live in Khambhat. Also working remotely as a Jr Frontend Developer
-                            intern at <a class="text-decoration-none" href="https://futureblink.com/">@futureblink</a>,
-                        </p>
-                        <p>I was a kinda introverted guy so to overcome my shyness and as a side hustle I make <a
-                                class="text-decoration-none" href="https://youtube.com/c/VishwasAcharya">Youtube</a>
-                            videos, <a class="text-decoration-none"
-                                href="https://open.spotify.com/show/7DQt4atsshjsEG0Am49lHr?si=ii3DcV4JQT2CxOJWWidZKg&utm_source=copy-link">Podcasts</a>
-                            🎙 and I have a liking towards Photography also, so sharing that through my <a
-                                class="text-decoration-none" href="https://instagram.com/vishwasracharya">Instagram</a>.
-                        </p>
-                        <p>And when I feel low 🥱 or in a zone to do nothing then I listen to songs 🎶 and dance on
-                            them, just to get myself back on track.
-                        </p>
-                    </div>
-                </div>
+                </figure>
             </div>
-        </section>
+            <div class="col-md-9 px-md-5 mt-5 mt-md-0 mb-3 mb-md-0 text-justify d-flex align-items-start justify-content-center flex-column">
+                <h1 class="mb-3">Who Am I?</h1>
+                <p>I'm a learner 🎓 & a hustler 😎, presently pursuing my Bachelors in Information
+                    Technology Engineering from Sardar Patel College of Engineering, which is
+                    located near Vallabh Vidhyanagar where I live, I moved to this city when I was in 10th class
+                    before that I used to live in Khambhat. Also working remotely as a Jr Frontend Developer
+                    intern at <a class="text-decoration-none" href="https://futureblink.com/">@futureblink</a>,
+                </p>
+                <p>I was a kinda introverted guy so to overcome my shyness and as a side hustle I make <a
+                        class="text-decoration-none" href="https://youtube.com/c/VishwasAcharya">Youtube</a>
+                    videos, <a class="text-decoration-none"
+                        href="https://open.spotify.com/show/7DQt4atsshjsEG0Am49lHr?si=ii3DcV4JQT2CxOJWWidZKg&utm_source=copy-link">Podcasts</a>
+                    🎙 and I have a liking towards Photography also, so sharing that through my <a
+                        class="text-decoration-none" href="https://instagram.com/vishwasracharya">Instagram</a>.
+                </p>
+                <p>And when I feel low 🥱 or in a zone to do nothing then I listen to songs 🎶 and dance on
+                    them, just to get myself back on track.
+                </p>
+            </div>
+        </div>
+    </div>
 
         <%- include ('includes/cta.ejs') %>
         
@@ -92,55 +90,6 @@
 
                 <script>
                     document.getElementById('age').innerHTML = `Age ${calculateAge("2000-09-19")}`;
-
-                    // document.getElementById('subscribeBtn').addEventListener('click', function (e) {
-                    //     e.preventDefault();
-                    //     let name = document.getElementById('name').value;
-                    //     let email = document.getElementById('email').value;
-                    //     if (name !== '' && email !== '') {
-                    //         document.getElementById('name').style.borderColor = '';
-                    //         document.getElementById('email').style.borderColor = '';
-                    //         fetch('/subscribe', {
-                    //             method: 'POST',
-                    //             headers: {
-                    //                 'Content-Type': 'application/json'
-                    //             },
-                    //             body: JSON.stringify({
-                    //                 name: name,
-                    //                 email: email
-                    //             })
-                    //         })
-                    //         .then(res => res.json())
-                    //         .then(data => {
-                    //             if (data.success) {
-                    //                 document.getElementById('subscribeBtn').innerHTML = 'Subscribed';
-                    //                 document.getElementById('subscribeBtn').classList.add('btn-success');
-                    //                 document.getElementById('subscribeBtn').classList.remove('btn-primary');
-                    //                 document.getElementById('subscribeBtn').classList.add('disabled');
-                    //                 document.getElementById('subscribeBtn').classList.remove('btn-primary');
-                    //             } else if (data.isSubscribed) {
-                    //                 document.getElementById('subscribeBtn').innerHTML = 'Already Subscribed';
-                    //                 document.getElementById('subscribeBtn').classList.add('btn-success');
-                    //                 document.getElementById('subscribeBtn').classList.remove('btn-primary');
-                    //                 document.getElementById('subscribeBtn').classList.add('disabled');
-                    //                 document.getElementById('subscribeBtn').classList.remove('btn-primary');
-                    //             }
-                    //              else {
-                    //                 document.getElementById('subscribeBtn').innerHTML = 'Error';
-                    //                 document.getElementById('subscribeBtn').classList.add('btn-danger');
-                    //                 document.getElementById('subscribeBtn').classList.remove('btn-primary');
-                    //                 document.getElementById('subscribeBtn').classList.add('disabled');
-                    //                 document.getElementById('subscribeBtn').classList.remove('btn-primary');
-                    //             }
-                    //         })
-                    //         .catch(err => {
-                    //             console.log(err);
-                    //         })
-                    //     } else {
-                    //         document.getElementById('name').style.borderColor = 'red';
-                    //         document.getElementById('email').style.borderColor = 'red';
-                    //     }
-                    // });
                 </script>
 </body>
 

@@ -8,47 +8,47 @@
     "pod_availaibility": [
       {
         "platform_name": "Spotify",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/spotify@2x.png",
+        "platform_logo": "/img/icons/spotify.png",
         "platform_link": "https://open.spotify.com/show/7DQt4atsshjsEG0Am49lHr"
       },
       {
         "platform_name": "Anchor",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/anchor-wave@2x.png",
+        "platform_logo": "/img/icons/anchor.png",
         "platform_link": "https://anchor.fm/vishwasracharya"
       },
       {
         "platform_name": "Apple Podcasts",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/apple_podcasts.png",
+        "platform_logo": "/img/icons/applepodcast.png",
         "platform_link": "https://podcasts.apple.com/us/podcast/vishwas-acharya/id1527114275"
       },
       {
         "platform_name": "Google Podcasts",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/google_podcasts_outline.png",
+        "platform_logo": "/img/icons/googlepodcast.png",
         "platform_link": "https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yN2MzYjA2NC9wb2RjYXN0L3Jzcw=="
       },
       {
         "platform_name": "Overcast",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/overcast.png",
+        "platform_logo": "/img/icons/overcast.png",
         "platform_link": "https://overcast.fm/itunes1527114275/vishwas-acharya"
       },
       {
         "platform_name": "Amazon Music",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/amazon_music.png",
+        "platform_logo": "/img/icons/amazonmusic.png",
         "platform_link": "https://music.amazon.com/podcasts/5b0984de-e05a-4894-a35c-71ff0d08452c/vishwas-acharya"
       },
       {
         "platform_name": "Pocket Casts",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/pocket_casts.png",
+        "platform_logo": "/img/icons/pocketcast.png",
         "platform_link": "https://pca.st/z4xzukk2"
       },
       {
         "platform_name": "RadioPublic",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/radiopublic.png",
+        "platform_logo": "/img/icons/radiopublic.png",
         "platform_link": "https://radiopublic.com/vishwas-acharya-GZJNmJ"
       },
       {
         "platform_name": "Stitcher",
-        "platform_logo": "https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/008/stitcher_dark.png",
+        "platform_logo": "/img/icons/stitcher.png",
         "platform_link": "https://www.stitcher.com/podcast/vishwas-acharya"
       }
     ],
@@ -56,21 +56,21 @@
         {
             "episode_no": "1",
             "episode_name": "Introduction",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "Vishwas gives his introduction and gives the reason for making the podcast and why should you listen to his podcast. Also, he shares his social media links/ID into the podcast so make sure to listen up until the end. ",
             "episode_emLink": "3yHTUwOWBFtNF1Qq4PutUU"
         },
         {
             "episode_no": "2",
             "episode_name": "My First Day of College",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "Here is my second podcast episode. It is about my experience on the first day of College. This episode covers the routine of my first day of college and what happened on that day. It was quite a normal day for me. And if you haven't gone to college yet then go for this episode. Not so good not so bad. If you like my podcast then do subscribe and follow me. Also, check out these links given below and my YouTube channel too.",
             "episode_emLink": ""
         },
         {
             "episode_no": "2",
             "episode_name": "Comparing vs Finding",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "As from the title itself suggest the episode. This episode explains about Comparing vs Finding with an example. Also, suggest how to find yourself and how to make yourself unique. This episode is something that Vishwas has experienced it in his life. Also, Vishwas gives some great points on what to follow.",
             "episode_emLink": "6GetNiG9Auam2uEhqk93SC"
         },
@@ -84,14 +84,14 @@
         {
             "episode_no": "2",
             "episode_name": "Hiding doesn't work",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "This episode is about hiding means what will be the effect of hiding things from someone. Also, Vishwas shares one of his own incident of what he has hidden from someone. And as always there is QUOTE waiting for you at the end of this episode.",
             "episode_emLink": "0wLwqEon5LtSQuXWNZQQ6p"
         },
         {
             "episode_no": "2",
             "episode_name": "Is Fighting the only option",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "In this episode Vishwas has explained Fighting, what's the effect of that and what is the reason why we get angry, Also he gave a few tips to make yourself calm when you get angry. He also shares his own story on fighting.",
             "episode_emLink": "6qJKWoVtL4IGotXLFLMkjP"
         },
@@ -126,14 +126,14 @@
         {
             "episode_no": "2",
             "episode_name": "Write your Goals to achieve",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "This episode is about achieving your goals. In this episode, Vishwas shares his experience, about how he achieved one of his goals by writing it. Listen to this episode to know-how.",
             "episode_emLink": "3zbkjwVRC7CgJjcOItALJ8"
         },
         {
             "episode_no": "2",
             "episode_name": "Start training from today itself",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "This episode is about Vishwas sharing his tips and tricks on Training (Workout). He also shares his experience with it. You will also get to know about his first transformation which he calls an unknowing transformation, Also you will get some notable points on a workout if you are a beginner or a regular gym-goer, so don't miss it.",
             "episode_emLink": "2i10mBVDRKaCk2iH4J9NCQ"
         },
@@ -161,7 +161,7 @@
         {
             "episode_no": "2",
             "episode_name": "Focus on What you have",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "In this episode, Vishwas explains focusing on what you have, why you need not to worry about your situation, and what you don't have, he also shares one of his stories on basis of this tiopic.",
             "episode_emLink": "22sXPeSt7K2YVG2iW4NjYY"
         },
@@ -175,14 +175,14 @@
         {
             "episode_no": "2",
             "episode_name": "EMPTY mind is a DEVIL'S House",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "This episode is about Vishwas explaining the empty mind and how to overcome it. There are two segments in which the first one of empty mind and the second one is on the devil's house.",
             "episode_emLink": "58hEwXn067coP96WWLivb8"
         },
         {
             "episode_no": "2",
             "episode_name": "Exchange your thoughts",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "Here you'll know a few things on thoughts and a reason why to share them with others. Hope you like this short and simple episode.",
             "episode_emLink": "4mbFvIrRh7MsZp7IcfxCWj"
         },
@@ -203,49 +203,49 @@
         {
             "episode_no": "2",
             "episode_name": "Every Coin has two sides",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "This episode is about Vishwas explaining this topic and also shares his view and gives a few examples to understand this topic. Tell me what you feel about it.",
             "episode_emLink": "6mpUf1kOEipMA0imfOPuzn"
         },
         {
             "episode_no": "2",
             "episode_name": "The Two most important persons in your LIFE",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "This episode is about Vishwas telling you that who are those two persons in your LIFE, which are there forever for you. And shares his life story.",
             "episode_emLink": "77Ssm7VGbNfJgVnqxmN9GW"
         },
         {
             "episode_no": "2",
             "episode_name": "Asking for sympathy will make you weaker",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "This episode is about Vishwas Aacharya explaining how Faking a need for sympathy and how it affects anyone. Also some of the instance included and a real story also.",
             "episode_emLink": "3SV9Xxrhl4B7ZEkqN84uYn"
         },
         {
             "episode_no": "2",
             "episode_name": "Be Responsive Not Reactive",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "In this episode Vishwas explained a little bit on reactive and responsive and as always a Quote as well.",
             "episode_emLink": "637eqEDLvK3aNBwBXTi7fB"
         },
         {
             "episode_no": "2",
             "episode_name": "LIE Once and TRUST is gone",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "Here you'll get some idea about why we should stop lying and how people can get the wrong idea from your LIE.",
             "episode_emLink": "4OncdDD7W3IYVQgmf0lK59"
         },
         {
             "episode_no": "2",
             "episode_name": "Dont FIGHT over being PERFECT",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "Here's is one more episode describing about our small argument but on a very silly thing's.",
             "episode_emLink": "6dDpX9DQhhUHO5asUOcjP7"
         },
         {
             "episode_no": "2",
             "episode_name": "Have you ever felt Left Out",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "Here's the realisation of Vishwas Acharya from the covid lockdown, and the things which most of his friends didn't know about him.",
             "episode_emLink": "6Tg5wvU46LPvu007IlWwjA"
         },
@@ -266,14 +266,14 @@
         {
             "episode_no": "2",
             "episode_name": "HATE",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "A very simple episode, but with an amazing fact which everyone knows but never applies or acknowledged it.",
             "episode_emLink": "5CasgZN7YHq9Vyhay0QOaY"
         },
         {
             "episode_no": "2",
             "episode_name": "My Badminton Story",
-            "episode_image": "/img/pod-blog/EGO.png",
+            "episode_image": "/img/pod-blog/coming-soon.png",
             "episode_desc": "This episode is about me sharing the first rejection in sports and how my never give up mentality gave me exposure to play badminton instead of one rejection.",
             "episode_emLink": "4UBAOX9r4lPwfwPWt8ytGF"
         }

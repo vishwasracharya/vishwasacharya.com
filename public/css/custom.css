@@ -28,11 +28,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #cececef3;
 }
-a{
+a {
   text-decoration: none;
   color: #202124;
 }
-a:hover{
+a:hover {
   text-decoration: none;
   color: #202124;
 }
@@ -70,7 +70,7 @@ a:hover{
 .text-justify {
   text-align: justify;
 }
-.height-30{
+.height-30 {
   height: 30px;
 }
 /* link {
@@ -80,28 +80,46 @@ link:hover {
   transition: all 0.4s ease-in-out !important;
   color: #4169e1 !important;
 }
-.btn-blue{
+.btn-blue {
   background-color: #4169e1 !important;
   color: #ffffff !important;
 }
-.btn-blue:hover{
+.btn-blue:hover {
   background-color: #2b59e2 !important;
   color: #ffffff !important;
 }
-.tab{
+.tab {
   color: #000000;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
-.tab:hover{
+.tab:hover {
   background-color: #e8e8e879;
 }
-.tab-active{
+.tab-active {
   background-color: #e8e8e879 !important;
 }
-.rounded{
+.rounded {
   border-radius: 10px !important;
 }
-.text-blue{
+.text-blue {
   color: #4169e1 !important;
+}
+.org-icons {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+.org-icons:hover {
+  transform: scale(1.2);
+}
+section{     
+  padding: 3rem 0;       
+}
+.bg-blue {
+  background-color: #4169e1;
 }
