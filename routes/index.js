@@ -4,6 +4,7 @@ let router = express.Router();
 const path = require('path');
 const keys = require('../config/keys');
 const Subscriber = require('../model/subscriberSchema');
+const projectData = require('../data/projects.json');
 // require db 
 require('../db/conn');
 
@@ -22,6 +23,13 @@ router.get('/', addLocals, function (req, res) {
 router.get('/about', addLocals, function (req, res) {
     res.render('about', {
         slug: getPathFromUrl(req.originalUrl),
+    });
+});
+
+router.get('/projects', addLocals, function (req, res) {
+    res.render('projects', {
+        slug: getPathFromUrl(req.originalUrl),
+        projectData: projectData,
     });
 });
 

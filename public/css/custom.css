@@ -29,6 +29,7 @@
   background: #cececef3;
 }
 a {
+  cursor: pointer;
   text-decoration: none;
   color: #202124;
 }
@@ -73,11 +74,11 @@ a:hover {
 .height-30 {
   height: 30px;
 }
-/* link {
-  color: #ffffff;
-} */
-link:hover {
-  transition: all 0.4s ease-in-out !important;
+.link {
+  color: currentColor;
+  transition: all 0.1s ease-in-out !important;
+}
+.link:hover {
   color: #4169e1 !important;
 }
 .btn-blue {
@@ -122,4 +123,14 @@ section{
 }
 .bg-blue {
   background-color: #4169e1;
+}
+.font-xs {
+  font-size: 10.5px;
+}
+.slide-right{
+  transition: all 0.3s ease-in-out;
+  transform: translateX(0);
+}
+.slide-right:hover {
+  transform: translateX(100%);
 }

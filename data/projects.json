@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Spectian User",
+    "desc": "This is an android application for our college students, so that they can access some sort of material from this application itself.",
+    "img": "/img/projects/spectian.png",
+    "link": "https://github.com/vishwasracharya/Spectian",
+    "tags": ["Android App", "Java", "XML", "Firebase"]
+  },
+  {
+    "name": "Spectian Admin",
+    "desc": "This Android application is the admin part of the application called spectian, This is basically where the administrator and faculties of the college will handle this app to upload assignments, notices, book PDF's and all.",
+    "img": "/img/projects/spectian-admin.png",
+    "link": "https://github.com/vishwasracharya/Spectian-Admin",
+    "tags": ["Android App", "Java", "XML", "Firebase"]
+  },
+  {
+    "name": "SalesBlink.io",
+    "desc": "This is my very recent project that I worked during my internship @futureblink. This is a web application that helps the sales team to manage their sales process. It is a CRM system that helps the sales team to manage their sales process.",
+    "img": "/img/projects/salesblink-io.png",
+    "link": "https://salesblink.io",
+    "tags": ["Website", "NodeJS", "Javascript", "MongoDB"]
+  },
+  {
+    "name": "NMR Enterprise",
+    "desc": "My first ever internship in Tech and I mostly contributed in the front-end development of this web application. It is the company's website that represents the company and its products.",
+    "img": "/img/projects/nmr-enterprise.png",
+    "link": "https://www.nmrenterprise.com/about-us.php",
+    "tags": ["Website", "pHp", "HTML", "CSS", "Javascript", "SQL"]
+  },
+  {
+    "name": "Basic Chatbot",
+    "desc": "This chatbot is created using HTML, CSS and JS. This chatbot works on hardcoded responses. Hence it says Basic Chatbot. It is a simple chatbot that can be used for any kind of conversation.",
+    "img": "/img/projects/basic-chatbot.png",
+    "link": "https://vishwasracharya.github.io/Basic-Chatbot",
+    "tags": ["Website", "HTML", "CSS", "Javascript", "JQuery"]
+  },
+  {
+    "name": "E-Library",
+    "desc": "A Project which is created while learning of ASP.NET, It is not my own design I've copied the designed from the tutorial. It is a library management system which is used by the students of the college.",
+    "img": "/img/projects/elibrary.png",
+    "link": "https://github.com/vishwasracharya/E-Library",
+    "tags": ["ASP.NET", "HTML", "CSS", "Javascript", "C#", "MS-SQL"]
+  },
+  {
+    "name": "Notes App",
+    "desc": "A Notes App using only basic technologies, includes: HTML5, CSS3, JavaScript. It is a simple notes app that can be used for any kind of notes.",
+    "img": "/img/projects/notes-basic.png",
+    "link": "https://vishwasracharya.github.io/Notes-Basic",
+    "tags": ["HTML", "CSS", "Javascript", "State Management"]
+  },
+  {
+    "name": "College Material",
+    "desc": "This website will hold all the material which was in Vishwas-BE-IT repo but with this help od this you'll get to watch/learn directly from the website with a better view. It is still in development, once it gets finished I'll let you know.",
+    "img": "/img/projects/college-material.png",
+    "link": "https://623c9cc24fc2f1009f08737b--zesty-biscuit-790f4f.netlify.app",
+    "tags": ["HTML", "CSS", "Vue", "Javascript", "Git", "GitHub"]
+  },
+  {
+    "name": "Drum Kit",
+    "desc": "Another website project which has a Drum Kit, I made it during the learning process of JavaScript. It is a simple drum kit that can be used to play/learn about music instruments.",
+    "img": "/img/projects/drum-kit.png",
+    "link": "https://vishwasracharya.github.io/Drum-Kit",
+    "tags": ["HTML", "CSS", "Javascript", "Git", "GitHub"]
+  },
+  {
+    "name": "Basic Calculator",
+    "desc": "A small project which I made during the learning of Web Development. It is a basic calculator which can be used to perform basic operations.",
+    "img": "/img/projects/basic-calculator.png",
+    "link": "https://vishwasracharya.github.io/Basic-Calculator",
+    "tags": ["HTML", "CSS", "Javascript", "Git", "GitHub"]
+  },
+  {
+    "name": "Dice Game",
+    "desc": "Its just a website which has a Dice Game, I made it during the learning process of JavaScript. It is a simple dice game that can be used to play/learn about games.",
+    "img": "/img/projects/dice-game.png",
+    "link": "https://vishwasracharya.github.io/Dice-Game",
+    "tags": ["HTML", "CSS", "Javascript", "Git", "GitHub"]
+  }
+]

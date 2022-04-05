@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('includes/meta.ejs') %>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Vishwas Acharya</title>
+    <%- include ('includes/styles.ejs') %>
+
+    <style>
+        .hero-bg{
+            filter: opacity(0.7);
+        }
+        .project-desc{
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <%- include ('includes/navbar.ejs') %>
+
+    <section class="bg-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-12 col-md-5 mb-5 mb-md-0 d-flex align-items-start justify-content-center flex-column">
+                    <h1 class="fw-bold">Vishwas Acharya <br> <span class="text-blue">Projects</span></h1>
+                    <p class="text-muted">Whatever projects I have or will be created, all of that projects overview will be available here, It also includes the projects from my internships.</p>
+                    <p class="text-muted">Also, most of my project code and live links will be on GitHub, So check out my GitHub profile as well.</p>
+                    <a class="btn btn-dark bg-gradient rounded fa-brands fa-github" href="https://github.com/vishwasracharya" target="_blank"><span class="text-white ms-2">GitHub</span></a>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+                    <img class="img-fluid hero-bg" style="width: 20rem; height: auto;" src="img/graphics/projects-bg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="mb-4">All Projects <i class="fa-solid fa-lightbulb mx-1"></i></h2>
+
+            <div class="row">
+                <% for (let i=0; i<projectData.length; i++) {%> 
+                <div class="col-md-6 col-xl-4 mb-3 overflow hidden">
+                    <div class="d-flex align-items-center justify-content-start border rounded">
+                        <div class="my-3 mx-2">
+                            <img src="<%=projectData[i].img%>" width="100" alt="<%=projectData[i].name%> Image">
+                        </div>
+                        <div class="my-3 mx-2">
+                            <p class="h5 fw-bold text-secondary"><%=projectData[i].name%></p>
+                            <p class="text-muted font-xs project-desc mb-1"><%=projectData[i].desc%></p>
+                            <ul class="mb-1 p-0">
+                                <% for (let j=0; j<projectData[i].tags.length; j++) {%> 
+                                    <li class="badge bg-light rounded-pill font-xs m-0 text-muted"><%=projectData[i].tags[j]%></li>
+                                <% } %>
+                            </ul>
+                            <a class="font-xs link" href="<%=projectData[i].link%>" target="_blank">Got To Project <i class="fa-solid fa-angles-right link mx-1"> </i></a>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+            <%- include ('includes/footer.ejs') %>
+                <%- include ('includes/scripts.ejs') %>
+</body>
+
+</html>
