@@ -26,13 +26,13 @@ router.get('/about', addLocals, function (req, res) {
 });
 
 router.get('/terms-of-services', addLocals, function (req, res) {
-    res.render('includes/terms-of-services', {
+    res.render('legal/terms-of-services', {
         slug: getPathFromUrl(req.originalUrl),
     });
 });
 
 router.get('/privacy-policy', addLocals, function (req, res) {
-    res.render('includes/privacy-policy', {
+    res.render('legal/privacy-policy', {
         slug: getPathFromUrl(req.originalUrl),
     });
 });
