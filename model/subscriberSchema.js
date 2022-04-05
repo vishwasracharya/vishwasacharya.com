@@ -12,6 +12,10 @@ const subscriberSchema = new mongoose.Schema({
         //     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
         //     'Please fill a valid email address'
         // ]
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
 })
 const Subscriber = mongoose.model('SUBSCRIBER', subscriberSchema);
