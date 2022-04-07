@@ -6,43 +6,37 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <title>Vishwas Acharya</title>
         <%- include ('includes/styles.ejs') %>
-
-        <style>
-            .github-badge{
-                font-size: x-small;
-                font-weight: 600;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                letter-spacing: 1px;
-            }
-        </style>
 </head>
 
 <body>
     <%- include ('includes/navbar.ejs') %>
 
-    <div class="container">
-        <div class="row vertical-center center mx-auto">
-            <div class="col-10 col-md-7">
-                <div class="d-flex flex-column text-center text-md-start">
-                    <h1 class="h1">Vishwas Acharya</h1>
-                    <p class="text-muted">A tech 💻 guy by profession, other than that it's just a side hustle 😉</p>
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md-6 mb-5 mb-md-0 d-flex align-items-start justify-content-center flex-column">
+                    <div class="">
+                        <h1 class="h1 fw-bold text-blue">Welcome</h1>
+                        <h1 class="h1 fw-bold">I Am Vishwas Acharya</h1>
+                        <p class="text-muted">Jr Frontend Developer Intern @FutureBlink, Video Editor, Creator, SPCE </p>
+                        <a class="btn btn-dark fa-solid fa-envelope rounded bg-gradient" href="#cta" rel="noopener noreferrer"> <span class="text-white ms-2 fw-normal">Subscribe</span></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <img class="rounded-pill img-fluid border bounceIn" id="heroImg" width="250" src="img/index-hero-img-2.png" alt="Vishwas Acharya Hero Image">
                 </div>
             </div>
-            <div class="col-10 col-md-3">
-                <img class="rounded-pill w-100 shadow-lg gradient-borders" id="heroImg"
-                    src="img/index-hero-img-2.png" alt="Vishwas Acharya Hero Image">
-            </div>
         </div>
-    </div>
+    </section>
 
     <section>
         <div class="container">
             <div class="col-12 col-md-9">
 
                 <div class="mb-5">
-                    <h2 class="mb-4">About Me 🤷‍♂️</h2>
+                    <h2 class="fw-bold mb-4">About Me </h2>
                     <p class="fw-bold">Hi, 👋</p>
-                    <p>My name is Vishwas Acharya and soon will be graduating 🎓
+                    <p class="text-muted">My name is Vishwas Acharya and soon will be graduating 🎓
                         as a Bachelor's of Information Technology Engineer from
                         <a class="text-blue" href="http://spec.edu.in/" target="_blank">SPCE</a>.
                         <br>
@@ -53,76 +47,76 @@
                 </div>
 
                 <div class="mb-5">
-                    <h2 class="mb-4">Education 🎓</h2>
+                    <h2 class="fw-bold mb-4">Education</h2>
                     <div class="mb-3">
-                        <p class="fw-bold m-0">Sardar Patel College of Engineering <span class="text-muted fw-normal font-monospace">(2018-2022)</span></p>
-                        <p class="text-muted">Bachelor of Engineering (B.E) in Information Technology</p>
+                        <p class="fw-bold m-0 text-muted">Sardar Patel College of Engineering <span class="text-muted fw-normal font-xs">(2018-2022)</span></p>
+                        <p class="text-muted font-s">Bachelor of Engineering (B.E) in Information Technology</p>
                     </div>
                     <div class="mb-3">
-                        <p class="fw-bold m-0">Knowledge High School <span class="text-muted fw-normal font-monospace">(2016-2018)</span></p>
-                        <p class="text-muted">Science/Group A (Maths) - Class 10<sup class="text-muted">th</sup>, 11<sup class="text-muted">th</sup>, 12<sup class="text-muted">th</sup></p>
+                        <p class="fw-bold m-0 text-muted">Knowledge High School <span class="text-muted fw-normal font-xs">(2016-2018)</span></p>
+                        <p class="text-muted font-s">Science/Group A (Maths) - Class 10<sup class="text-muted">th</sup>, 11<sup class="text-muted">th</sup>, 12<sup class="text-muted">th</sup></p>
                     </div>
                 </div>
 
                 <div class="mb-5">
-                    <h2 class="mb-4">Skills 🛠</h2>
+                    <h2 class="fw-bold mb-4">Skills</h2>
                     <div class="mb-3">
                         <p class="fw-bold mb-1">Tech</p>
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/GULP-%23CF4647.svg?style=for-the-badge&logo=gulp&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white" />
-                        <img class="m-1 rounded shadow-sm" src="https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white" />
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-node-js"> <span class="ms-2">Node.JS</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands"><span class="ms-2">Express.JS</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands"><span class="ms-2">Mongo DB</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-js"><span class="ms-2">JavaScript</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-html5"><span class="ms-2">HTML5</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-css3-alt"><span class="ms-2">CSS3</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-sass"><span class="ms-2">SASS</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-java"><span class="ms-2">Java</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-react"><span class="ms-2">React</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands"><span class="ms-2">Heroku</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-git-alt"><span class="ms-2">Git</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-github"><span class="ms-2">GitHub</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-bootstrap"><span class="ms-2">Bootstrap</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-gulp"><span class="ms-2">Gulp</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-jira"><span class="ms-2">Jira</span></li>
+                        <li class="badge border rounded p-2 m-1 text-dark fa-brands fa-bitbucket"><span class="ms-2">BitBucket</span></li>
                     </div>
                     <div class="mb-3">
                         <p class="fw-bold mb-1">Other</p>
-                        <li class="list-inline-item p-2 m-1 rounded text-white github-badge shadow-sm" style="background-color: #330D3E;">🎬 VIDEO EDITING</li>
-                        <li class="list-inline-item p-2 m-1 rounded text-white github-badge shadow-sm" style="background-color: #FF5733;">🎧 AUDIO EDITING</li>
-                        <li class="list-inline-item p-2 m-1 rounded text-white github-badge shadow-sm" style="background-color:royalblue">📸 PHOTOGRAPHY</li>
+                        <li class="badge border text-dark p-2 m-1 rounded"> <span class="fw-normal">Video Editing</span></li>
+                        <li class="badge border text-dark p-2 m-1 rounded"> <span class="fw-normal">Audio Editing</span></li>
+                        <li class="badge border text-dark p-2 m-1 rounded"> <span class="fw-normal">Photography</span></li>
                     </div>
                 </div>
 
                 <div class="mb-5">
-                    <h2 class="mb-4">Experience 💻</h2>
+                    <h2 class="fw-bold mb-4">Experience</h2>
                     <div class="mb-4">
-                        <p class="fw-bold">Jr Front-End Developer</p>
+                        <p class="fw-bold text-muted">Jr Front-End Developer</p>
                         <div>
                             <a class="text-blue" href="https://futureblink.com" target="_blank">FutureBlink</a>
                             <p class="text-muted fw-normal mb-2">Feb 2022 - Present</p>
-                            <ul>
+                            <ul class="font-s">
                                 <li>Developing functionalities on <a class="text-blue" href="https://salesblink.io" target="_blank">@salesblink</a> website.</li>
                                 <li>Working with nodejs and other front-end frameworks.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="mb-4">
-                        <p class="fw-bold">Web Developer</p>
+                        <p class="fw-bold text-muted">Web Developer</p>
                         <div>
                             <a class="text-blue" href="https://nmrenterprise.com" target="_blank">NMR Enterprise</a>
                             <p class="text-muted fw-normal mb-2">May 2021 - September 2021</p>
-                            <ul>
+                            <ul class="font-s">
                                 <li>Developed Front-End websites, Identified & resolved Bugs in the company's website.</li>
                                 <li>Maintained the code & documentation of the website for future development.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="mb-4">
-                        <p class="fw-bold">Video Editor</p>
+                        <p class="fw-bold text-muted">Video Editor</p>
                         <div class="mb-3">
                             <a class="text-blue" href="http://worldmentmedia.com" target="_blank">Worldment Media</a>
                             <p class="text-muted fw-normal mb-2">July 2021 - December 2021</p>
-                            <ul>
+                            <ul class="font-s">
                                 <li>Worked on 500+ video content, including categories like comedy, ads, beauty.</li>
                                 <li>Edited short form content to maximize the companies reach</li>
                             </ul>
@@ -130,7 +124,7 @@
                         <div class="mb-3">
                             <a class="text-blue" href="https://curiouswings.ml/" target="_blank">Curious Wings</a>
                             <p class="text-muted fw-normal mb-2">April 2021 - May 2021</p>
-                            <ul>
+                            <ul class="font-s">
                                 <li>Editing Educational video on the given Voice Over(VO)</li>
                                 <li>Graphics, Animation, Basic Audio editing</li>
                             </ul>
@@ -138,7 +132,7 @@
                         <div class="mb-3">
                             <a class="text-blue" href="http://indeedfoundation.org" target="_blank">IN-DEED Foundation</a>
                             <p class="text-muted fw-normal mb-2">February 2021 - March 2021</p>
-                            <ul>
+                            <ul class="font-s">
                                 <li>Performed checks on videos and audios for copyright content and child-friendly content</li>
                                 <li>Audio editing for educational videos</li>
                             </ul>
@@ -151,77 +145,10 @@
     
     <%- include ('includes/blogs.ejs') %>
     <%- include ('includes/cta.ejs') %>
-
-        <!-- for Blogs -->
-        <!-- <section class="my-5">
-            <div class="container">
-                <h2 class="text-start mb-3">Blogs 📑</h2>
-                <div class="row">
-                    <div class="col-md-8 mb-3">
-                        <p class="h4">Why Do I write Blogs?</p>
-                        <p>The reason I write blogs because there are some bits of my experiences that I cannot share
-                            via Podcast or Youtube, because I won't be able to give justice to that parts. Hence I share
-                            that by writing Blogs</p>
-                        <p>I started writing Blogs in 2021 just after I started making podcasts. And I must say, I
-                            learned so many things during the time to making this things, And so I'll be sharing
-                            everything what I've learned via this platforms</p>
-                        <div class="d-flex align-items-start justify-content-start">
-                            <a class="btn btn-blue text-center center height-30" href="/blog">See More<i
-                                    class="fa-solid fa-arrow-up-right-from-square ms-2 text-white"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mx-auto mb-3">
-                        <a href="" class="text-decoration-none">
-                            <div class="rounded border-0">
-                                <img loading="lazy" class="card-img-top rounded"
-                                    src="https://vishwasracharya.github.io/img/blogs/The-attraction.png"
-                                    alt="The Attraction">
-                                <div class="text-center mt-2">
-                                    <h5 class="m-0 p-0">The Attraction!</h5>
-                                    <p class=""><small class="text-muted">November 08, 2021</small></p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section class="mb-5">
-            <div class="container">
-                <h2 class="mb-3">Podcast 🎙</h2>
-                <div class="row">
-                    <div class="col-md-6 overflow-hidden mb-3">
-                        <iframe loading="lazy" class="fadeIn" allow="autoplay *; encrypted-media *; fullscreen *"
-                            frameborder="0" height="450"
-                            style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                            src="https://embed.podcasts.apple.com/us/podcast/vishwas-acharya/id1527114275"></iframe>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="h4">Why Do I Make Podcast?</p>
-                        <p>As we all know that during 2020 the coivd pandemic came up, so we all were in our houses,
-                            hence at that time so many new terms came up and one of them was podcast, so I thought why
-                            not giv it a try, so I researched about it like what is it and how it work, then I wrote
-                            some scripts based on the book i have Which I call it a Quote Book, then I released my first
-                            podcast on Aug 9, 2020 and then I started making more and as I got into flow I really liked
-                            this way of sharing things, hence that's the origin story of my podcast</p>
-                        <div class="d-flex align-items-start justify-content-start">
-                            <a class="btn btn-blue text-center center height-30" href="/podcast">See More<i
-                                    class="fa-solid fa-arrow-up-right-from-square ms-2 text-white"></i></a>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center flex-column">
-                            <iframe loading="lazy" class="fadeIn w-100 h-100 my-2" src="https://open.spotify.com/embed/show/7DQt4atsshjsEG0Am49lHr?utm_source=generator" scrolling=no frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                            <iframe loading="lazy" class="fadeIn w-100 h-100 my-2" sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups allow-forms" scrolling=no frameborder="0" src="https://embed.radiopublic.com/e?if=vishwas-acharya-GZJNmJ&ge=s1!d144c82fded09693ae8112bd1efd3d084b52b3e0"></iframe>
-                            <iframe loading="lazy" class="fadeIn w-100 h-100 my-2" src="https://anchor.fm/vishwasracharya/embed/episodes/The-Way-You-Talk--MATTERS-e11ci8h/a-a5l7m4e" frameborder="0" scrolling="no"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-            <%- include ('includes/footer.ejs') %>
-                <%- include ('includes/scripts.ejs') %>
+    <div id="cta"></div>
+    
+    <%- include ('includes/footer.ejs') %>
+    <%- include ('includes/scripts.ejs') %>
 </body>
 
 </html>

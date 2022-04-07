@@ -10,6 +10,9 @@
   color: #202124;
   text-decoration: none !important;
 }
+html{
+  scroll-behavior: smooth;
+}
 /*  Scroll Bar CSS */
 ::-webkit-scrollbar {
   width: 8px;
@@ -127,10 +130,27 @@ section{
 .font-xs {
   font-size: 10.5px;
 }
+.font-s {
+  font-size: 14px;
+}
 .slide-right{
   transition: all 0.3s ease-in-out;
   transform: translateX(0);
 }
 .slide-right:hover {
   transform: translateX(100%);
+}
+.github-badge{
+  font-size: x-small;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+}
+.text-muted-hover{
+  filter: brightness(1) opacity(1);
+  transition: all 0.3s ease-in-out;
+}
+.text-muted-hover:hover{
+  filter: brightness(0.5) !important;
+  transition: all 0.3s ease-in-out;
 }
