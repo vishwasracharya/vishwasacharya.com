@@ -75,7 +75,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <button type="submit" class="btn btn-blue rounded bg-gradient height-30 center">Send</button>
+                        <button type="submit" class="btn btn-blue rounded bg-gradient height-30 center" id="sendMessageBtn">Send</button>
                     </div>
                 </div>
             </div>
@@ -84,6 +84,57 @@
     
     <%- include ('includes/footer.ejs') %>
     <%- include ('includes/scripts.ejs') %>
+
+    <script>
+        document.getElementById('sendMessageBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let message = document.getElementById('message').value;
+            if (name !== '' && email !== '' && message !== '') {
+                document.getElementById('name').style.borderColor = '';
+                document.getElementById('email').style.borderColor = '';
+                document.getElementById('message').style.borderColor = '';
+                fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        message: message
+                    })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            document.getElementById('sendMessageBtn').innerHTML = 'Sent';
+                            document.getElementById('sendMessageBtn').classList.add('btn-success');
+                            document.getElementById('sendMessageBtn').classList.remove('btn-blue');
+                            document.getElementById('sendMessageBtn').classList.add('disabled');
+                            document.getElementById('sendMessageBtn').classList.remove('btn-blue');
+                        } else {
+                            document.getElementById('sendMessageBtn').innerHTML = 'Error';
+                            document.getElementById('sendMessageBtn').classList.add('btn-danger');
+                            document.getElementById('sendMessageBtn').classList.remove('btn-blue');
+                            document.getElementById('sendMessageBtn').classList.add('disabled');
+                            document.getElementById('sendMessageBtn').classList.remove('btn-blue');
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+            } else {
+                document.getElementById('name').style.borderColor = 'red';
+                document.getElementById('email').style.borderColor = 'red';
+                document.getElementById('message').style.borderColor = 'red';
+            }
+        });
+    </script>
+
 </body>
 
 </html>

@@ -4,6 +4,7 @@ let router = express.Router();
 const path = require('path');
 const keys = require('../config/keys');
 const Subscriber = require('../model/subscriberSchema');
+const Contact = require('../model/contactSchema');
 const projectData = require('../data/projects.json');
 // require db 
 require('../db/conn');
@@ -95,6 +96,50 @@ router.post('/subscribe', function (req, res) {
                 status: 'error',
                 message: 'Something went wrong'
             });
+        });
+});
+
+// Contact Page Message Route (Contact Page)
+router.post('/contact', function (req, res) {
+    const { name, email, phone, message } = req.body;
+    // validate
+    if (!name || !email || !message) {
+        return res.status(400).json({
+            status: 'error',
+            message: 'Please fill all the fields'
+        });
+    }
+    // save to db
+    Contact.findOne({ email: email })
+        .then(() => {
+            const newContact = new Contact({
+                name,
+                email,
+                phone,
+                message
+            });
+            newContact.save()
+                .then(() => {
+                    res.status(201).json({
+                        success: true,
+                        status: 'success',
+                        message: 'Message Sent successfully'
+                    });
+                })
+                .catch(err => {
+                    res.status(500).json({
+                        success: false,
+                        status: 'error',
+                        message: 'Something went wrong'
+                    });
+                    console.log(err);
+                });
+            }).catch(err => {
+                res.status(500).json({
+                    status: 'error',
+                    message: 'Something went wrong'
+                });
+                console.log(err);
         });
 });
 
