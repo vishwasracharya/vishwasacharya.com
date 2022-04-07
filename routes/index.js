@@ -45,6 +45,12 @@ router.get('/privacy-policy', addLocals, function (req, res) {
     });
 });
 
+router.get('/contact', addLocals, function (req, res) {
+    res.render('contact', {
+        slug: getPathFromUrl(req.originalUrl),
+    });
+});
+
 // Newsletter Route (About Page)
 router.post('/subscribe', function (req, res) {
     const { name, email } = req.body;

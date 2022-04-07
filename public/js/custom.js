@@ -12,6 +12,7 @@ function btnActive() {
         document.getElementsByClassName("tab")[5].classList.add("tab-active");
     } else if (siteFullURL.includes("/privacy-policy")) {
         document.getElementsByClassName("tab")[6].classList.add("tab-active");
+    } else if (siteFullURL.includes("/contact")) {
     } else {
         document.getElementsByClassName("tab")[0].classList.add("tab-active");
     }

@@ -154,3 +154,6 @@ section{
   filter: brightness(0.5) !important;
   transition: all 0.3s ease-in-out;
 }
+.hero-bg{
+  filter: opacity(0.7);
+}
