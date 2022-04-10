@@ -11,11 +11,11 @@
 <body>
     <%- include ('../includes/navbar.ejs') %>
     
-    <section class="">
-        <div class="container">
-            <div class="row vertical-center">
+    <section class="bg-light">
+        <div class="container my-5">
+            <div class="row">
                 <div class="col-md-10 mx-auto text-center">
-                    <h1 class="h1 fw-normal">Vishwas Acharya Blogs</h1>
+                    <h1 class="fw-bold">Vishwas Acharya Blogs</h1>
                     <p class="text-muted">Tech 💻, Philosophy, Life, Experience 😇</p>
                 </div>
             </div>
@@ -24,7 +24,31 @@
 
     <section>
         <div class="container">
-            <span class="text-muted center">Page is still Under Development</span>
+            <div class="row">
+                <% for (let i=0; i<posts.length; i++) {%> 
+                <div class="col-md-6 col-xl-4 mb-3 overflow hidden">
+                    <div class="border rounded overflow hidden">
+                        <a href="<%=site_url%><%=slug%>/<%=posts[i].title.toLowerCase().split(' ').join('-')%>">
+                        <div class="p-2">
+                            <img class="img-fluid text-muted-hover rounded" src="/img/pod-blog/<%=posts[i].title.toLowerCase().split('?').join('').split('!').join('').split(',').join('').split(' ').join('-').split(`'`).join('').split(`.`).join('')%>.png" alt="<%=posts[i].title.toLowerCase().split('?').join('').split('!').join('').split(',').join('').split(' ').join('-').split(`'`).join('').split(`.`).join('')%>">
+                            <div class="mt-3">
+                                <h5 class="fw-bold ms-1"><%=posts[i].title%></h5>
+                                <ul class="mb-2 p-0">
+                                    <% for (let j=0; j<posts[i].labels.length; j++) {%> 
+                                        <li class="badge bg-light rounded-pill font-xs m-0 text-muted text-dark"><%=posts[i].labels[j]%></li>
+                                    <% } %>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-between mt-3 mx-2"> 
+                                    <p class="my-auto text-muted font-xs"><i class="fa-solid fa-calendar-days text-muted me-2"></i><%-formattedDate(oldDate = new Date(posts[i].published))%></p>
+                                    <a class="font-xs link" href="<%=site_url%><%=slug%>/<%=posts[i].title.toLowerCase().split(' ').join('-')%>">Got To Blog <i class="fa-solid fa-angles-right link mx-1"> </i></a>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <% } %>
+            </div>
         </div>
     </section>
 
@@ -48,5 +72,34 @@
 
     <%- include ('../includes/footer.ejs') %>
         <%- include ('../includes/scripts.ejs') %>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            fetch('https://www.googleapis.com/blogger/v3/blogs/6674204064435445357/posts?key=AIzaSyCiEDjDJCPSuy4TlyA9I6jof56i0w2Pdzs')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    let posts = data.items;
+                    let output = '';
+                    $.each(posts, (index, post) => {
+                        output += `
+                            <div class="col-md-12 mx-auto">
+                                <a href="${post.url}" class="text-decoration-none">
+                                    <div class="rounded border-0 shadow">
+                                        <div class="mx-3 p-2">
+                                            <h5 class="">${post.title}</h5>
+                                            <p class="">${post.content}</p>
+                                        </div>
+                                    </div>  
+                                </a>
+                            </div>
+                        `;
+                    });
+                    $('#posts').html(output);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        </script> -->
 </body>
 </html>
