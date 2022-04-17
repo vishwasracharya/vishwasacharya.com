@@ -60,7 +60,7 @@
                 <div class="col-md-12 mx-auto">
                     <ul>
                         <% for (let i=0; i<podEpisodes.length; i++) {%>
-                            <li><a class="text-underline-hover" href="<%=site_url%><%=slug%>/<%= podEpisodes[i].episode_name.toLowerCase().split(' ').join('-') %>" rel="noopener noreferrer"><%= podEpisodes[i].episode_name %></a></li>
+                            <li><a class="link" href="<%=site_url%><%=slug%>/<%= podEpisodes[i].episode_name.toLowerCase().split(' ').join('-') %>" rel="noopener noreferrer"><%= podEpisodes[i].episode_name %></a></li>
                         <% } %>
                     </ul>
                 </div>

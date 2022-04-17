@@ -31,32 +31,33 @@ function capitalizeFirstLetter(string) {
     return string.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
 }
 
-router.get('/', addLocals, function (req, res) {
-    blogger.posts.list(params, (err, response) => {
-        if (err) {
-            console.log(err);
-            return res.status(500).send(err);
-        }
-        res.render('blog/index', {
-            posts: response.data.items,
-            title: 'Blog',
-        });
+router.get('/', addLocals, async (req, res) => {
+    let posts = await blogger.posts.list(params);
+    getSlugofPost(posts);
+    res.render('blog/index', {
+        posts : posts.data.items,
+        title: 'Blog',
     });
 });
-router.get('/:selected_blog', addLocals, function (req, res) {
-    blogger.posts.list(params, (err, response) => {
-        if (err) {
-            console.log(err);
-            return res.status(500).send(err);
-        }
-        res.render('blog/posts', {
-            posts: response.data.items,
-            selected_blog: req.params.selected_blog,
-            title: capitalizeFirstLetter(req.params.selected_blog.split('-').join(' ')),
-            
-        });
+
+router.get('/:postName', addLocals, async (req, res) => {
+    let posts = await blogger.posts.list(params);
+    getSlugofPost(posts);
+    res.render('blog/posts', {
+        posts: posts.data.items,
+        postName: req.params.postName,
+        title: capitalizeFirstLetter(req.params.postName.split('-').join(' ')),
+        
     });
 });
+
+function getSlugofPost(postData) {
+    for (let i=0; i<postData.data.items.length; i++) {
+        let post = postData.data.items[i];
+        postData.data.items[i].url = post.url.split("/")[5].split(".")[0];
+        post.content = post.content.replace(/style=".*?"|<img.*?>|<object.*?<\/object>|<p><\/p>|<p>&nbsp;<\/p>|<p>\s*<\/p>|<br>|<div class="separator">.*?<\/div>/g, '');
+    }
+}
 
 function addLocals(req, res, next) {
     res.locals.site_url = keys.site_url;

@@ -34,12 +34,7 @@ html{
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #202124;
   transition: all 0.3s ease-in-out;
-}
-a:hover {
-  text-decoration: none;
-  color: #4169e1;
 }
 /* Dark Mode CSS */
 .dark-mode {
