@@ -80,19 +80,19 @@
                                 <h5 class="fw-bold">Share</h5>
                                 <p class="text-muted font-xs">Hope you enjoyed reading this blog hence, If you like this blog then do share it with your friends & family.</p>
                                 <div class="">
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=<%=site_url%><%=slug%>&quote=Check out this amazing blog - <%= posts[i].title %>" title="Share by Facebook" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=<%=site_url%><%=slug%>&quote=Check out this amazing blog - <%=posts[i].title%>" title="Share by Facebook" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
                                         <img loading="lazy" class="org-icons" src="/img/icons/facebook.png" alt="Facebook Icon"/>
                                     </a>
-                                    <a href="https://www.linkedin.com/shareArticle?url=<%=site_url%>/<%=slug%>&amp;title=<%= posts[i].title %> &amp;summary=Check out this amazing blog -&amp;source=<%=site_url%><%=slug%>" title="Share by LinkedIn" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
+                                    <a href="https://www.linkedin.com/shareArticle?url=<%=site_url%><%=slug%>&amp;title=<%= posts[i].title %> &amp;summary=Check out this amazing blog -&amp;source=<%=site_url%><%=slug%>" title="Share by LinkedIn" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
                                         <img loading="lazy" class="org-icons" src="/img/icons/linkedin.png" alt="LinkedIn Icon"/>
                                     </a>
                                     <a href="https://twitter.com/intent/tweet?text=Check out this amazing blog - <%= posts[i].title %> at <%=site_url%><%=slug%>" title="Share by Tweet" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
                                         <img loading="lazy" class="org-icons" src="/img/icons/twitter.png" alt="Twitter Icon"/>
                                     </a>
-                                    <a href="https://wa.me/?text=Check out this blog - <%= posts[i].title %> at <%=site_url%><%=slug%>" data-action="share/whatsapp/share" title="Share by Whatsapp" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
+                                    <a href="https://wa.me/?text=Check out this blog - <%=posts[i].title%> at <%=site_url%><%=slug%>" data-action="share/whatsapp/share" title="Share by Whatsapp" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
                                         <img loading="lazy" class="org-icons" src="/img/icons/whatsapp.png" alt="Whatsapp Icon"/>
                                     </a>
-                                    <a href="mailto:?subject=<%= posts[i].title %>&amp;body=Check out this blog - <%= posts[i].title %> at <%=site_url%><%=slug%>" title="Share by Email" title="Share by Email" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
+                                    <a href="mailto:?subject=<%=posts[i].title%>&amp;body=Check out this blog - <%= posts[i].title %> at <%=site_url%><%=slug%>" title="Share by Email" title="Share by Email" rel="noreferer, noopener" target="_blank" class="rounded mx-1">
                                         <img loading="lazy" class="org-icons" src="/img/icons/gmail.png" alt="Gmail Icon"/>
                                     </a>
                                 </div>
