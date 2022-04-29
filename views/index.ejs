@@ -31,21 +31,30 @@
 
     <section>
         <div class="container">
-            <div class="col-12 col-md-9">
-
+            
                 <div class="mb-5">
                     <h2 class="fw-bold mb-4">About Me </h2>
-                    <p class="fw-bold">Hi, 👋</p>
-                    <p class="text-muted">My name is Vishwas Acharya and soon will be graduating 🎓
-                        as a Bachelor's of Information Technology Engineer from
-                        <a class="text-blue" href="http://spec.edu.in/" target="_blank">SPCE</a>.
-                        <br>
-                        I enjoy working in tech 💻 and love to be a part of different communities, hence that's the
-                        reason I enjoy learning 📕 & sharing,
-                        Apart from this I utilize my time by making Podcast 🎙, Vlogs 📷 and Blogs.
-                    </p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <p class="fw-bold">Hi, 👋</p>
+                            <p class="text-muted">My name is Vishwas Acharya and soon will be graduating 🎓
+                                as a Bachelor's of Information Technology Engineer from
+                                <a class="text-blue" href="http://spec.edu.in/" target="_blank">SPCE</a>.
+                                <br>
+                                I enjoy working in tech 💻 and love to be a part of different communities, hence that's the
+                                reason I enjoy learning 📕 & sharing,
+                                Apart from this I utilize my time by making Podcast 🎙, Vlogs 📷 and Blogs.
+                            </p>
+                        </div>
+                        <div class="col-md-6 my-auto">
+                            <div class="center">
+                                <img class="img-fluid rounded" src="https://activity-graph.herokuapp.com/graph?username=vishwasracharya&bg_color=f8f9fa&color=4169e1&line=4169e1&point=4169e1&area=true&hide_border=true">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                
+                <div class="col-12 col-md-9">
                 <div class="mb-5">
                     <h2 class="fw-bold mb-4">Education</h2>
                     <div class="mb-3">
@@ -145,6 +154,18 @@
     
     <%- include ('includes/blogs.ejs') %>
     <div id="cta"></div>
+    <%- include ('includes/cta.ejs') %>
+
+    <div class="container">
+        <div class="my-5">
+            <h2 class="fw-bold mb-4 text-center">GitHub Stats</h2>
+            <p class="text-muted text-center">This are my github stats! If you are interested in 😅</p>
+            <div class="center flex-wrap">
+                <img class="img-fluid rounded border m-3" src="https://github-readme-stats.vercel.app/api?username=vishwasracharya&show_icons=true&hide_border=true" alt="Vishwas's github stats" />
+                <img class="img-fluid rounded border m-3" src="https://github-readme-streak-stats.herokuapp.com/?user=vishwasracharya&hide_border=true" alt="Vishwas's github strak stats" />
+            </div>
+        </div>
+    </div>
     
     <%- include ('includes/footer.ejs') %>
     <%- include ('includes/scripts.ejs') %>
