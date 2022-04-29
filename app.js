@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 5000
 
 dotenv.config({ path: './config/config.env' });
 require('./db/conn');
-const Subscriber = require('./model/subscriberSchema');
 
 // Routers for the different pages
 let indexRouter = require('./routes/index'),
@@ -29,7 +28,7 @@ app.use(
 app
   .use(express.static(path.join(__dirname, 'public')))
   .use(compression())
-  .use(helmet())
+  // .use(helmet())
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .listen(PORT, () => console.log(`App Started on ${ PORT }`))
