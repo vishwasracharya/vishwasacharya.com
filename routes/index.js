@@ -16,39 +16,39 @@ function getPathFromUrl(url) {
 // Home Page Route (Landing Page)
 router.get('/', addLocals, function (req, res) {
     res.render('index', {
-        slug: getPathFromUrl(req.originalUrl),
+        title: 'Home | Vishwas Acharya',
     });
 });
 
 // About Page Route (Landing Page)
 router.get('/about', addLocals, function (req, res) {
     res.render('about', {
-        slug: getPathFromUrl(req.originalUrl),
+        title: 'About | Vishwas Acharya',
     });
 });
 
 router.get('/projects', addLocals, function (req, res) {
     res.render('projects', {
-        slug: getPathFromUrl(req.originalUrl),
+        title: 'Projects | Vishwas Acharya',
         projectData: projectData,
     });
 });
 
 router.get('/terms-of-services', addLocals, function (req, res) {
     res.render('legal/terms-of-services', {
-        slug: getPathFromUrl(req.originalUrl),
+        title: 'Terms of Services | Vishwas Acharya',
     });
 });
 
 router.get('/privacy-policy', addLocals, function (req, res) {
     res.render('legal/privacy-policy', {
-        slug: getPathFromUrl(req.originalUrl),
+        title: 'Privacy Policy | Vishwas Acharya',
     });
 });
 
 router.get('/contact', addLocals, function (req, res) {
     res.render('contact', {
-        slug: getPathFromUrl(req.originalUrl),
+        title: 'Contact | Vishwas Acharya',
     });
 });
 

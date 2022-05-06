@@ -2,9 +2,13 @@ let express = require('express');
 let router = express.Router();
 const keys = require('../config/keys');
 const { google } = require('googleapis');
+const graphql = require('graphql');
+const {GraphQLObjectType, GraphQLSchema, GraphQLInt, GraphQLString} = require('graphql');
+const { graphqlHTTP } = require('express-graphql')
 
 const API_KEY = process.env.GOOGLE_API_KEY;
 const BLOG_ID = process.env.BLOG_ID;
+const hashnode_token = process.env.HASHNODE_TOKEN;
 
 const blogger = google.blogger({
     version: 'v3',
@@ -36,9 +40,54 @@ router.get('/', addLocals, async (req, res) => {
     getSlugofPost(posts);
     res.render('blog/index', {
         posts : posts.data.items,
-        title: 'Blog',
+        title: 'Blog | Vishwas Acharya',
     });
 });
+
+// const PostType = new GraphQLObjectType({
+//     name: 'Post',
+//     fields: () => ({
+//         id: { type: GraphQLInt },
+//         title: { type: GraphQLString },
+//         content: { type: GraphQLString },
+//         published: { type: GraphQLString },
+//         url: { type: GraphQLString },
+//         slug: { type: GraphQLString },
+//         tags: { type: GraphQLString },
+//         image: { type: GraphQLString },
+//     })
+// });
+// const rootQuery = new GraphQLObjectType({
+//     name: 'RootQueryType',
+//     fields: {
+//         post: {
+//             type: PostType,
+//             args: {
+//                 id: { type: GraphQLString }
+//             },
+//             resolve(parentValue, args) {
+//                 return getPost(args.id);
+//             }
+//         }
+//     }
+// });
+
+// const mutation = 'query';
+
+// const schema = new graphql.GraphQLSchema({
+//     query : rootQuery,
+//     mutation : mutation
+// });
+// router.use('/graphql', graphqlHTTP({
+//     schema,
+//     graphiql: true,
+// }));
+
+// router.get('/tech', addLocals, async (req, res) => {
+//     res.render('blog/tech', {
+//         title: 'Tech',
+//     });
+// });
 
 router.get('/:postName', addLocals, async (req, res) => {
     let posts = await blogger.posts.list(params);
@@ -46,7 +95,7 @@ router.get('/:postName', addLocals, async (req, res) => {
     res.render('blog/posts', {
         posts: posts.data.items,
         postName: req.params.postName,
-        title: capitalizeFirstLetter(req.params.postName.split('-').join(' ')),
+        title: capitalizeFirstLetter(req.params.postName.split('-').join(' ')) + ' | Vishwas Acharya',
         
     });
 });

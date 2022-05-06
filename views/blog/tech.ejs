@@ -3,7 +3,7 @@
 <head>
     <%- include ('../includes/meta.ejs') %>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title><%=title%></title>
+    <title>Blog | Vishwas Acharya</title>
     <%- include ('../includes/styles.ejs') %>
     <style>
     </style>
@@ -25,34 +25,35 @@
     <section>
         <div class="container">
             <div class="row">
-                <% for (let i=0; i<posts.length; i++) {%> 
+                <%# for (let i=0; i<posts.length; i++) {%> 
                 <div class="col-md-6 col-xl-4 mb-3 overflow hidden bounceIn">
                     <div class="border rounded overflow hidden">
-                        <a href="<%=site_url%><%=slug%>/<%=posts[i].url%>">
+                        <a href="">
                         <div class="p-2">
-                            <img loading="lazy" class="img-fluid text-muted-hover rounded fadeIn" src="img/blogs/<%=posts[i].url%>.png" alt="<%=posts[i].title%>">
+                            <img loading="lazy" class="img-fluid text-muted-hover rounded fadeIn" src="img/blogs/.png" alt="">
                             <div class="mt-3">
-                                <h5 class="fw-bold ms-1"><%=posts[i].title%></h5>
+                                <h5 class="fw-bold ms-1">hlo</h5>
                                 <ul class="mb-2 p-0">
-                                    <% for (let j=0; j<posts[i].labels.length; j++) {%> 
-                                        <li class="badge bg-light rounded-pill font-xs m-0 text-muted text-dark"><%=posts[i].labels[j]%></li>
-                                    <% } %>
+                                    <%# for (let j=0; j<posts[i].labels.length; j++) {%> 
+                                        <li class="badge bg-light rounded-pill font-xs m-0 text-muted text-dark"></li>
+                                    <%# } %>
                                 </ul>
                                 <div class="d-flex align-items-center justify-content-between mt-3 mx-2"> 
-                                    <p class="my-auto text-muted font-xs"><i class="fa-solid fa-calendar-days text-muted me-2"></i><%-formattedDate(oldDate = new Date(posts[i].published))%></p>
-                                    <a class="font-xs link" href="<%=site_url%><%=slug%>/<%=posts[i].url%>">Got To Blog <i class="fa-solid fa-angles-right link mx-1"> </i></a>
+                                    <p class="my-auto text-muted font-xs"><i class="fa-solid fa-calendar-days text-muted me-2"></i></p>
+                                    <a class="font-xs link" href="">Got To Blog <i class="fa-solid fa-angles-right link mx-1"> </i></a>
                                 </div>
                             </div>
                         </div>
                         </a>
                     </div>
                 </div>
-                <% } %>
+                <%# } %>
             </div>
         </div>
     </section>
 
     <%- include ('../includes/footer.ejs') %>
-        <%- include ('../includes/scripts.ejs') %>
+    <%- include ('../includes/scripts.ejs') %>
 </body>
+</script>
 </html>

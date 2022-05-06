@@ -18,7 +18,14 @@
     "desc": "This is my very recent project that I worked during my internship @futureblink. This is a web application that helps the sales team to manage their sales process. It is a CRM system that helps the sales team to manage their sales process.",
     "img": "/img/projects/salesblink-io.png",
     "link": "https://salesblink.io",
-    "tags": ["Website", "NodeJS", "Javascript", "MongoDB"]
+    "tags": ["Website", "NodeJS", "Javascript", "Express", "MongoDB"]
+  },
+  {
+    "name": "PlayStory.io",
+    "desc": "This one is the second project of @futureblink. It is a website that creates an interactive environment in creating and watching videos, like videos that let's you play around.",
+    "img": "/img/projects/playstory-io.png",
+    "link": "https://playstory.io",
+    "tags": ["Website", "NodeJS", "Javascript", "Express", "MongoDB"]
   },
   {
     "name": "NMR Enterprise",
@@ -32,7 +39,7 @@
     "desc": "This chatbot is created using HTML, CSS and JS. This chatbot works on hardcoded responses. Hence it says Basic Chatbot. It is a simple chatbot that can be used for any kind of conversation.",
     "img": "/img/projects/basic-chatbot.png",
     "link": "https://vishwasracharya.github.io/Basic-Chatbot",
-    "tags": ["Website", "HTML", "CSS", "Javascript", "JQuery"]
+    "tags": ["Website", "HTML", "CSS", "Javascript", "Git", "GitHub", "JQuery"]
   },
   {
     "name": "E-Library",
@@ -46,7 +53,7 @@
     "desc": "A Notes App using only basic technologies, includes: HTML5, CSS3, JavaScript. It is a simple notes app that can be used for any kind of notes.",
     "img": "/img/projects/notes-basic.png",
     "link": "https://vishwasracharya.github.io/Notes-Basic",
-    "tags": ["HTML", "CSS", "Javascript", "State Management"]
+    "tags": ["HTML", "CSS", "Javascript", "Git", "GitHub", "State Management"]
   },
   {
     "name": "College Material",

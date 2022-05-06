@@ -7,22 +7,26 @@ function getPathFromUrl(url) {
     return url.split("?")[0];
 }
 
+function capitalizeFirstLetter(string) {
+    return string.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+}
+
 router.get('/', addLocals, function (req, res) {
     res.render('podcast/index', {
-        slug: getPathFromUrl(req.originalUrl),
         podDetails: podData[0].pod_details,
         podAvailaibility: podData[0].pod_availaibility,
         podEpisodes: podData[0].pod_episodes,
+        title: 'Podcast | Vishwas Acharya',
     });
 });
 
 router.get('/:selected_episode', addLocals, function (req, res) {
     res.render('podcast/episode', {
-        slug: getPathFromUrl(req.originalUrl),
         podDetails: podData[0].pod_details,
         podAvailaibility: podData[0].pod_availaibility,
         podEpisodes: podData[0].pod_episodes,
         selected_episode: req.params.selected_episode,
+        title: capitalizeFirstLetter(req.params.selected_episode.split('-').join(' ')) + ' | Vishwas Acharya',
     });
 });
 
