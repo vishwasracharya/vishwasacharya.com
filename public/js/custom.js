@@ -1,5 +1,5 @@
 const siteFullURL = window.location.href;
-function btnActive() {
+(function btnActive() {
     if (siteFullURL.includes("/projects")) {
         document.getElementsByClassName("tab")[1].classList.add("tab-active");
     } else if (siteFullURL.includes("/about")) {
@@ -16,8 +16,8 @@ function btnActive() {
     } else {
         document.getElementsByClassName("tab")[0].classList.add("tab-active");
     }
-}
-btnActive();
+})();
+
 // 💡 Dark & Light Mode Toggle Using Local Storage
 // let darkMode = localStorage.getItem('darkMode');
 // const darkModeToggle = document.querySelector('#darkModeToggle');
