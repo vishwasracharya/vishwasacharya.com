@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vishwasacharya.herokuapp.com/sitemap.xml
