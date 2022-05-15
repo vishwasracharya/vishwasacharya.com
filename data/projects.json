@@ -28,6 +28,20 @@
     "tags": ["Website", "NodeJS", "Javascript", "Express", "MongoDB"]
   },
   {
+    "name": "InstaCopy.ai",
+    "desc": "This one is also a sub project of futureblink, And my work on this was to develop this website with different theme given to me but with the same content and Page structure.",
+    "img": "/img/projects/instacopy-ai.png",
+    "link": "https://instacopy.ai/",
+    "tags": ["Website", "NodeJS", "Javascript", "Express", "MongoDB"]
+  },
+  {
+    "name": "StackGrab.io",
+    "desc": "This one is also a sub project of futureblink, And my work on this was to develop required web pages and coding of required features, It also Included integration with Stripe Payment Gateway.",
+    "img": "/img/projects/stackgrab-io.png",
+    "link": "https://stackgrab.io/",
+    "tags": ["Website", "NodeJS", "Javascript", "Express", "MongoDB"]
+  },
+  {
     "name": "NMR Enterprise",
     "desc": "My first ever internship in Tech and I mostly contributed in the front-end development of this web application. It is the company's website that represents the company and its products.",
     "img": "/img/projects/nmr-enterprise.png",
@@ -82,5 +96,12 @@
     "img": "/img/projects/dice-game.png",
     "link": "https://vishwasracharya.github.io/Dice-Game",
     "tags": ["HTML", "CSS", "Javascript", "Git", "GitHub"]
+  },
+  {
+    "name": "Contact React App",
+    "desc": "A basic React App which has a contact form and shows the data. A Fundamental Web App to learn React.",
+    "img": "/img/projects/contact-react-app.png",
+    "link": "https://627ff2729c197515110cf454--comfy-sherbet-6752db.netlify.app/",
+    "tags": ["React.Js", "Javascript", "Git", "Netlify"]
   }
 ]
