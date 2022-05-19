@@ -103,5 +103,12 @@
     "img": "/img/projects/contact-react-app.png",
     "link": "https://627ff2729c197515110cf454--comfy-sherbet-6752db.netlify.app/",
     "tags": ["React.Js", "Javascript", "Git", "Netlify"]
+  },
+  {
+    "name": "Landing Page React App",
+    "desc": "A basic React App which has a morden day landing page, which has some information about clients, projects and all. This one was a task given to me before the job interview.",
+    "img": "/img/projects/landing-page-react.png",
+    "link": "https://vishwasracharya.github.io/landing-page-react/",
+    "tags": ["React.Js", "Javascript", "Git", "GitHub"]
   }
 ]
