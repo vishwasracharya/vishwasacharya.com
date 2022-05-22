@@ -57,13 +57,6 @@ task('inject:all', function() {
     return Promise.all(tasks);
 });
 
-task('cashbust:all', () => {
-    const tasks = Files.map((fileName) => {
-        cashBustTask(fileName);
-    });
-    return Promise.all(tasks);
-});
-
 task('minify:js', () => {
     return src(paths.baseDir.js + paths.js.bootstrap).pipe(src(paths.baseDir.js + paths.js.custom))
         .pipe(uglify())
@@ -90,31 +83,28 @@ function injectTask(fileName) {
         .pipe(dest(paths.baseDir.views + Path.dirname(fileName)));
 }
 
-task('blog/index', () => {return cssTask(Files[0]), injectTask(Files[0]) ;});
-task('blog/posts', () => {return cssTask(Files[1]), injectTask(Files[1]) ;});
-task('legal/privacy-policy', () => {return cssTask(Files[2]), injectTask(Files[2]) ;});
-task('legal/terms-of-services', () => {return cssTask(Files[3]), injectTask(Files[3]) ;});
-task('podcast/episode', () => {return cssTask(Files[4]), injectTask(Files[4]) ;});
-task('podcast/index', () => {return cssTask(Files[5]), injectTask(Files[5]) ;});
-task('about', () => {return cssTask(Files[6]), injectTask(Files[6]) ;});
-task('contact', () => {return cssTask(Files[7]), injectTask(Files[7]) ;});
-task('index', () => {return cssTask(Files[8]), injectTask(Files[8]);});
-task('projects', () => {return cssTask(Files[9]), injectTask(Files[9]) ;});
-
-
-task('run:all', series('css:all', 'inject:all'));
+task('css:blog/index', () => {return cssTask(Files[0]);});
+task('css:blog/posts', () => {return cssTask(Files[1]);});
+task('css:legal/privacy-policy', () => {return cssTask(Files[2]);});
+task('css:legal/terms-of-services', () => {return cssTask(Files[3]);});
+task('css:podcast/episode', () => {return cssTask(Files[4]);});
+task('css:podcast/index', () => {return cssTask(Files[5]);});
+task('css:about', () => {return cssTask(Files[6]);});
+task('css:contact', () => {return cssTask(Files[7]);});
+task('css:index', () => {return cssTask(Files[8])});
+task('css:projects', () => {return cssTask(Files[9]);});
 
 task('watch', () => {
-    watch(paths.baseDir.views + Files[0] + '.ejs', series('blog/index'));
-    watch(paths.baseDir.views + Files[1] + '.ejs', series('blog/posts'));
-    watch(paths.baseDir.views + Files[2] + '.ejs', series('legal/privacy-policy'));
-    watch(paths.baseDir.views + Files[3] + '.ejs', series('legal/terms-of-services'));
-    watch(paths.baseDir.views + Files[4] + '.ejs', series('podcast/episode'));
-    watch(paths.baseDir.views + Files[5] + '.ejs', series('podcast/index'));
-    watch(paths.baseDir.views + Files[6] + '.ejs', series('about'));
-    watch(paths.baseDir.views + Files[7] + '.ejs', series('contact'));
-    watch(paths.baseDir.views + Files[8] + '.ejs', series('index'));
-    watch(paths.baseDir.views + Files[9] + '.ejs', series('projects'));
+    watch(paths.baseDir.views + Files[0] + '.ejs', series('css:blog/index'));
+    watch(paths.baseDir.views + Files[1] + '.ejs', series('css:blog/posts'));
+    watch(paths.baseDir.views + Files[2] + '.ejs', series('css:legal/privacy-policy'));
+    watch(paths.baseDir.views + Files[3] + '.ejs', series('css:legal/terms-of-services'));
+    watch(paths.baseDir.views + Files[4] + '.ejs', series('css:podcast/episode'));
+    watch(paths.baseDir.views + Files[5] + '.ejs', series('css:podcast/index'));
+    watch(paths.baseDir.views + Files[6] + '.ejs', series('css:about'));
+    watch(paths.baseDir.views + Files[7] + '.ejs', series('css:contact'));
+    watch(paths.baseDir.views + Files[8] + '.ejs', series('css:index'));
+    watch(paths.baseDir.views + Files[9] + '.ejs', series('css:projects'));
 });
 
 task('default', series('watch'));
