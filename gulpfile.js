@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     { src, dest, watch, series, parallel, task } = require('gulp'),
     cleancss = require('gulp-clean-css'),
     purgecss = require('gulp-purgecss'),
-    replace = require("gulp-replace"),
     concat = require('gulp-concat'),
     inject = require('gulp-inject'),
     uglify = require('gulp-uglify'),
@@ -80,41 +79,27 @@ function cssTask(fileName) {
 }
 
 function injectTask(fileName) {
+    const d = new Date();
+    const cbString = d.getTime();
     return src([paths.baseDir.views + fileName + '.ejs'])
         .pipe(inject(src(paths.dest.css + fileName + '.css'), {
             ignorePath: "public/",
-            // addSuffix: "?cb=123",
+            addSuffix: "?cb=" + cbString,
             addRootSlash: true,
         }))
         .pipe(dest(paths.baseDir.views + Path.dirname(fileName)));
 }
 
-function cashBustTask(fileName) {
-    const d = new Date();
-    const cbString = d.getTime();
-    return src([paths.baseDir.views + fileName + '.ejs'])
-        .pipe(replace(/cb=\d+/g, "cb=" + cbString))
-        .pipe(dest(paths.baseDir.views + Path.dirname(fileName)));
-}
-
-task('cbtask', () => {
-    const d = new Date();
-    const cbString = d.getTime();
-    return src([paths.baseDir.views + '**/*.ejs'])
-        .pipe(replace(/cb=\d+/g, "cb=" + cbString))
-        .pipe(dest(paths.baseDir.views + '**/*'));
-});
-
-task('blog/index', () => {return cssTask(Files[0]);});
-task('blog/posts', () => {return cssTask(Files[1]);});
-task('legal/privacy-policy', () => {return cssTask(Files[2]);});
-task('legal/terms-of-services', () => {return cssTask(Files[3]);});
-task('podcast/episode', () => {return cssTask(Files[4]);});
-task('podcast/index', () => {return cssTask(Files[5]);});
-task('about', () => {return cssTask(Files[6]);});
-task('contact', () => {return cssTask(Files[7]);});
-task('index', () => {return cssTask(Files[8]);});
-task('projects', () => {return cssTask(Files[9]);});
+task('blog/index', () => {return cssTask(Files[0]), injectTask(Files[0]) ;});
+task('blog/posts', () => {return cssTask(Files[1]), injectTask(Files[1]) ;});
+task('legal/privacy-policy', () => {return cssTask(Files[2]), injectTask(Files[2]) ;});
+task('legal/terms-of-services', () => {return cssTask(Files[3]), injectTask(Files[3]) ;});
+task('podcast/episode', () => {return cssTask(Files[4]), injectTask(Files[4]) ;});
+task('podcast/index', () => {return cssTask(Files[5]), injectTask(Files[5]) ;});
+task('about', () => {return cssTask(Files[6]), injectTask(Files[6]) ;});
+task('contact', () => {return cssTask(Files[7]), injectTask(Files[7]) ;});
+task('index', () => {return cssTask(Files[8]), injectTask(Files[8]);});
+task('projects', () => {return cssTask(Files[9]), injectTask(Files[9]) ;});
 
 
 task('run:all', series('css:all', 'inject:all'));
