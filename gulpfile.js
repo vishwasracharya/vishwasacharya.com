@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     { src, dest, watch, series, parallel, task } = require('gulp'),
     cleancss = require('gulp-clean-css'),
     purgecss = require('gulp-purgecss'),
+    replace = require("gulp-replace"),
     concat = require('gulp-concat'),
     inject = require('gulp-inject'),
     uglify = require('gulp-uglify'),
@@ -35,7 +36,7 @@ var Files = ['blog/index', 'blog/posts', 'legal/privacy-policy', 'legal/terms-of
 
 /* ALL Tasks */
 
-task('css', function() {
+task('css', () => {
     return src(paths.baseDir.css + '**/*.css')
         .pipe(purgecss({ content: [ paths.baseDir.views + '**/*.ejs' ] }))
         .pipe(concat('style.css'))
@@ -43,19 +44,28 @@ task('css', function() {
         .pipe(dest(paths.dest.css));
 });
 
-task('inject:css', function() {
+task('css:all', () => {
     const tasks = Files.map((fileName) => {
-        return src([paths.baseDir.views + fileName + '.ejs'])
-            .pipe(inject(src('public/dist/css/' + fileName + '.css'), {
-                ignorePath: "public/",
-                addRootSlash: true,
-            }))
-            .pipe(dest(paths.baseDir.views + Path.dirname(fileName)));
+        cssTask(fileName);
     });
     return Promise.all(tasks);
 });
 
-task('minify:js', function() {
+task('inject:all', function() {
+    const tasks = Files.map((fileName) => {
+        injectTask(fileName);
+    });
+    return Promise.all(tasks);
+});
+
+task('cashbust:all', () => {
+    const tasks = Files.map((fileName) => {
+        cashBustTask(fileName);
+    });
+    return Promise.all(tasks);
+});
+
+task('minify:js', () => {
     return src(paths.baseDir.js + paths.js.bootstrap).pipe(src(paths.baseDir.js + paths.js.custom))
         .pipe(uglify())
         .pipe(dest(paths.dest.js));
@@ -69,6 +79,32 @@ function cssTask(fileName) {
         .pipe(dest(paths.dest.css + Path.dirname(fileName)));
 }
 
+function injectTask(fileName) {
+    return src([paths.baseDir.views + fileName + '.ejs'])
+        .pipe(inject(src(paths.dest.css + fileName + '.css'), {
+            ignorePath: "public/",
+            // addSuffix: "?cb=123",
+            addRootSlash: true,
+        }))
+        .pipe(dest(paths.baseDir.views + Path.dirname(fileName)));
+}
+
+function cashBustTask(fileName) {
+    const d = new Date();
+    const cbString = d.getTime();
+    return src([paths.baseDir.views + fileName + '.ejs'])
+        .pipe(replace(/cb=\d+/g, "cb=" + cbString))
+        .pipe(dest(paths.baseDir.views + Path.dirname(fileName)));
+}
+
+task('cbtask', () => {
+    const d = new Date();
+    const cbString = d.getTime();
+    return src([paths.baseDir.views + '**/*.ejs'])
+        .pipe(replace(/cb=\d+/g, "cb=" + cbString))
+        .pipe(dest(paths.baseDir.views + '**/*'));
+});
+
 task('blog/index', () => {return cssTask(Files[0]);});
 task('blog/posts', () => {return cssTask(Files[1]);});
 task('legal/privacy-policy', () => {return cssTask(Files[2]);});
@@ -79,6 +115,9 @@ task('about', () => {return cssTask(Files[6]);});
 task('contact', () => {return cssTask(Files[7]);});
 task('index', () => {return cssTask(Files[8]);});
 task('projects', () => {return cssTask(Files[9]);});
+
+
+task('run:all', series('css:all', 'inject:all'));
 
 task('watch', () => {
     watch(paths.baseDir.views + Files[0] + '.ejs', series('blog/index'));
