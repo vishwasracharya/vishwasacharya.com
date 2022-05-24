@@ -9,6 +9,7 @@ const favicon = require("serve-favicon");
 const keys = require('./config/keys');
 const helmet = require('helmet');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
 const cors = require("cors");
 const path = require('path');
 
@@ -53,6 +54,7 @@ app.use(
 
 app.use(cookieParser());
 // app.use(helmet());
+app.use(morgan('dev'));
 
 app.listen(PORT, () => console.log(`App Started on ${ PORT }`))
   
