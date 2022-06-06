@@ -39,7 +39,7 @@
     "desc": "This one is also a sub project of futureblink, And my work on this was to develop required web pages and coding of required features, It also Included integration with Stripe Payment Gateway.",
     "img": "/img/projects/stackgrab-io.png",
     "link": "https://stackgrab.io/",
-    "tags": ["Website", "NodeJS", "Javascript", "Express", "MongoDB"]
+    "tags": ["Website", "NodeJS", "Javascript", "Express", "MongoDB", "Firebase"]
   },
   {
     "name": "NMR Enterprise",
