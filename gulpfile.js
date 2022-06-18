@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     inject = require('gulp-inject'),
     uglify = require('gulp-uglify'),
-    Path = require('path')
+    Path = require('path'),
+    javascriptObfuscator = require('gulp-javascript-obfuscator'),
+    gulp_remove_logging = require("gulp-remove-logging")
 ;
     
 /* Paths */
@@ -34,6 +36,45 @@ var paths = {
 var Files = ['blog/index', 'blog/posts', 'legal/privacy-policy', 'legal/terms-of-services', 'podcast/episode', 'podcast/index', 'about', 'contact', 'index', 'projects'];
 
 /* ALL Tasks */
+gulp.task("remove_logging", function() {
+    return gulp.src("./public/js/bootstrap.bundle.js")
+        // .pipe(uglify())
+        // .pipe(javascriptObfuscator())
+      .pipe(gulp_remove_logging(
+        {
+            logging: false,
+            exceptions: [
+                "console.log",
+                "console.error",
+                "console.warn",
+                "console.info",
+                "console.debug",
+                "console.trace",
+                "console.time",
+                "console.timeEnd",
+                "console.assert",
+                "console.clear",
+                "console.count",
+                "console.dir",
+                "console.dirxml",
+                "console.error",
+                "console.exception",
+                "console.group",
+                "console.groupCollapsed",
+                "console.groupEnd",
+                "console.groupCollapsed",
+                "console.groupEnd",
+                "console.groupCollapsed",
+            ]
+        }
+        // {namespace: ['console', 'window.console']}
+        ))
+      .pipe(
+        gulp.dest(
+          "build/javascripts/"
+        )
+      );
+});
 
 task('css', () => {
     return src(paths.baseDir.css + '**/*.css')
