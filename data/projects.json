@@ -14,6 +14,13 @@
     "tags": ["Android App", "Java", "XML", "Firebase"]
   },
   {
+    "name": "Video Converter",
+    "desc": "This is a web app that helps you convert videos to mp3, mp4, and other formats. I built this tools as a part of my company project, and I made some changes and updations to the code, and added it to GitHub.",
+    "img": "/img/projects/video-converter.ico",
+    "link": "https://github.com/vishwasracharya/ffmpeg-with-nodejs",
+    "tags": ["FFMPEG", "JavaScript", "Node.Js", "Express", "EJS"]
+  },
+  {
     "name": "SalesBlink.io",
     "desc": "This is my very recent project that I worked during my internship @futureblink. This is a web application that helps the sales team to manage their sales process. It is a CRM system that helps the sales team to manage their sales process.",
     "img": "/img/projects/salesblink-io.png",
